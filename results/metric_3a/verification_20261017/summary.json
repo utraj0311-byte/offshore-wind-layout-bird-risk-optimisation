@@ -1,0 +1,89 @@
+{
+  "check_1_code_audit": "PASS",
+  "check_2_recalculation": "PASS",
+  "decision": "keep_metric_3a_no_rerun",
+  "recalculated_Q_3a": {
+    "random_start": 7.688414314122593,
+    "aligned_start": 5.460555118557852,
+    "aligned_reference": 5.525407012391223,
+    "cross_flow_reference": 9.560725671350504
+  },
+  "saved_Q_3a": {
+    "random_start": 7.688414314122593,
+    "aligned_start": 5.460555118557852,
+    "aligned_reference": 5.525407012391223,
+    "cross_flow_reference": 9.560725671350504
+  },
+  "mean_displacement_m": 32.001882116071414,
+  "max_displacement_m": 74.45724222632472,
+  "match_pairs": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      5,
+      5
+    ],
+    [
+      6,
+      6
+    ],
+    [
+      7,
+      7
+    ],
+    [
+      8,
+      8
+    ],
+    [
+      9,
+      9
+    ],
+    [
+      10,
+      10
+    ],
+    [
+      11,
+      11
+    ]
+  ],
+  "upstream_counts": {
+    "random_start": 8,
+    "aligned_start": 10,
+    "aligned_reference": 10,
+    "cross_flow_reference": 6
+  },
+  "figures": [
+    "metric3a_convergence_comparison.pdf",
+    "metric3a_convergence_comparison.png",
+    "metric3a_layout_aligned_reference.pdf",
+    "metric3a_layout_aligned_reference.png",
+    "metric3a_layout_aligned_start.pdf",
+    "metric3a_layout_aligned_start.png",
+    "metric3a_layout_cross_flow_reference.pdf",
+    "metric3a_layout_cross_flow_reference.png",
+    "metric3a_layout_random_start.pdf",
+    "metric3a_layout_random_start.png",
+    "metric3a_layouts_comparison.pdf",
+    "metric3a_layouts_comparison.png"
+  ]
+}

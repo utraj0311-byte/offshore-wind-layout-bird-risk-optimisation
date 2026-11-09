@@ -1,0 +1,47 @@
+{
+  "metric": "1c",
+  "source_hash_matches": {
+    "config.py": true,
+    "wake.py": true,
+    "hypothetical_risk.py": true,
+    "validation_problem.py": true,
+    "run_validation.py": true,
+    "run_jensen_1deg.py": true
+  },
+  "source_hash_count": 6,
+  "saved_pareto_layout_count": 3,
+  "turbines_per_layout": 12,
+  "saved_npz_X_shape": [
+    3,
+    24
+  ],
+  "saved_npz_F_shape": [
+    3,
+    2
+  ],
+  "max_abs_xy_delta_m": 4.547473508864641e-13,
+  "max_abs_Q_delta": 0.0,
+  "max_abs_min_spacing_delta_m": 2.2737367544323206e-13,
+  "pareto_risk_scores_sorted": [
+    0.0,
+    1000.0,
+    2000.0
+  ],
+  "min_achieved_spacing_m": 1043.8755519603085,
+  "all_layouts_within_site": true,
+  "all_layouts_960m_spacing_feasible": true,
+  "saved_1deg_reporting_aep_matches_optimisation": true,
+  "independent_half_degree_check_pass": true,
+  "half_degree_relative_percent_by_anchor": {
+    "energy_optimal": 0.0684251467842,
+    "collision_optimal": 0.0210019519317
+  },
+  "historical_archive_duplicate_byte_identical": true,
+  "historical_pareto_score_levels": [
+    1000.0,
+    2000.0,
+    4000.0
+  ],
+  "historical_source_provenance": "snapshot only; not authenticated as executable of historical run",
+  "test_type": "read-only structural, objective-replay, constraints, saved AEP check; NOT new optimisation or independent wake AEP simulation"
+}

@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "scenario": "northern-gannet FHD",
+  "FHD": {
+    "name": "northern_gannet_Johnston2014_FHD(3)",
+    "source": null,
+    "height_row_count": 300,
+    "minimum_height_m": 0.0,
+    "maximum_height_m": 299.0,
+    "mean_height_m": 9.149713887276398,
+    "input_schema": "height,prop (stochLAB/Johnston)",
+    "input_sha256": "adc9ea903db9c8e34bfe5b88c382381b737c2e676d79af437f66d198208a0f2c",
+    "input_probability_mass_sum": 1.0000000558430553,
+    "probability_mass_sum": 1.0000000000000002
+  },
+  "delta_150m_active": false,
+  "source_hashes": {
+    "runner": "c13b43fbfdd8d30fce0d1615be6868735494644a157444287445c39a7f683e7f",
+    "confirmation": "0d1deb9b6e6d591adc1314bd31c12c93bfc3c11558d28bf34e8e58d8618af1af",
+    "model10_objective": "387518eb9e50feb8460b5cac535e814e6e6e90fe9d33b34df71a823070a087b2",
+    "model10_band": "2c095e33563323fb60a8e7d70cb3ab7b5a9672adbf0df98da32d006fa7ed96e0",
+    "model10_baseline_runner": "c024f4b87d168b21b790e98204db1ca069463fb68624574c957e0f1e273300bb",
+    "model8": "2d9985f6c165a83fac5ed1493cefa1a65e8082a39d17e80e3776be12257e823d",
+    "model8_sampler": "d8f69ac2713be1553e9cc5ac60f5c2f0660d3ba397b35a7d872688e64c3e0510",
+    "model8_validation": "2e4205203858befa3527f310c8d706bb66c48fbcb0813c4e66485c55edabded7",
+    "model9": "3c821d5f62de8b292bc00190ae71ae1379be64ad4cd11c67dc631186b5650f09",
+    "config": "df56f80c33f8912eb44ef6380451d762ba71aabcd0aa002186bf506618fb074e",
+    "floris_wrapper": "686cfcb8d159dd6ac8e7ed2f4f3e612db8257a7c96709ab1c8d294b50bddd7a2",
+    "floris_config": "f6b788df9e38f006dfb6c68ddfb80ab090dad9cd555982a8d5c5e4b0c2f2d364",
+    "gannet_FHD": "adc9ea903db9c8e34bfe5b88c382381b737c2e676d79af437f66d198208a0f2c",
+    "blade_source": "1f39765f76c46d64de7adf1a18e00e2a372e14d737b03ef09f8f397ddacc5b27",
+    "reference_layout": "c1f506d3a9bed5cf16c6ae9074b541fb959bcc41e7ce14c347b34fec02d2f265",
+    "band_checks": "641b7c2bd0941e68e3bb0e363351f5a8e29a892073fc54254b5a9e5f03c2e8c6",
+    "rotor_incidence_checks": "25eabc5b296b0ad3041f587016c17de9bae489f2f7e290eae39c5b34ccf83f70",
+    "integration_checks": "11b1df6a71f059c67b10ba6708ca233d1a8bfebce72ea92e4d8aa6577a3ecc5e",
+    "model9_checks": "5d90eff89284e7908da1ee668407ab5ca1c8f83dde8bfefd328dc82a2c9be54e",
+    "preedit_snapshot": "a220899f04018857f195c5382b243b8413dcaab6e5c61cd83771499b32844400",
+    "preedit_path_coordinates": "ab31299acfa1919fda8c78897a03dae6c1f459e628f760acdc04b02a3fd68c6d",
+    "portable_snapshot_checks": "37e347ef9624996109556ae3b770344bf109951f911cf423479a393cc87ba609",
+    "floris_turbine": "93d2bcfcb619b1819efe8149ce9e8231656e51a29f2ae5c1079a46e339f02feb"
+  },
+  "reference_aep_gwh": 804.3901377275079,
+  "reference_minimum_pairwise_spacing_m": 987.2340581216546,
+  "same_seed_reference_evaluations_exactly_equal": true,
+  "verification_trajectory_seeds": [
+    737101,
+    737102
+  ],
+  "verification_height_seeds": [
+    738101,
+    738102
+  ],
+  "existing_checks_passed": [
+    "band_checks",
+    "rotor_incidence_checks",
+    "integration_checks"
+  ],
+  "portable_snapshot_checks": {
+    "status": "PASS",
+    "exact_archived_snapshot": true,
+    "archived_scalar_and_all_other_array_checks": "exact match",
+    "stored_path_coordinate_tolerance_m": 1e-08,
+    "archived_stored_path_numeric_comparison": {
+      "bird_0_maximum_coordinate_difference_m": 0.0,
+      "bird_13_maximum_coordinate_difference_m": 0.0
+    },
+    "existing_band_checks": "PASS",
+    "existing_fixed_rotor_incidence_checks": "PASS",
+    "band_downwind_fixture_probability": 0.06196422529849636,
+    "band_upwind_fixture_probability": 0.07586416449942328,
+    "conditional_disc_exposure_fixture": 0.0021037404351958704,
+    "band_weighted_fixture_contribution": 6.430471262622749e-05,
+    "unit_strike_matrix_max_error": 9.853229343548264e-16,
+    "downstream_two_bird_fixture_contribution": 0.6730686824373227,
+    "original_snapshot_sha256": "a220899f04018857f195c5382b243b8413dcaab6e5c61cd83771499b32844400",
+    "reference_path_fixture_sha256": "ab31299acfa1919fda8c78897a03dae6c1f459e628f760acdc04b02a3fd68c6d",
+    "portable_regression_snapshot_sha256": "a220899f04018857f195c5382b243b8413dcaab6e5c61cd83771499b32844400"
+  }
+}

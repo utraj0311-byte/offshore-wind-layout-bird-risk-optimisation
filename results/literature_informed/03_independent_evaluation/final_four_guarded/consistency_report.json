@@ -1,0 +1,17 @@
+{
+  "status": "PASSED",
+  "controls": [
+    "reference",
+    "highest_aep"
+  ],
+  "matching_values": 40,
+  "total_expected": 40,
+  "batch_count": 10,
+  "response_probabilities": [
+    0.6,
+    0.0
+  ],
+  "exact_equality_no_tolerance": true,
+  "archived_confirmation_sha256": "deec24d3d92239f263845456910a138f599b7e335aa634530deef419f2107ce8",
+  "message": "All 40 recomputed Q_lit observations exactly equal the previous confirmation."
+}

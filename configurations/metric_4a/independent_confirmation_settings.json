@@ -1,0 +1,61 @@
+{
+  "status": "confirmation_complete",
+  "source_optimisation_folder": "C:\\Users\\Deepak\\Desktop\\bird_layout_opt\\metric_4a_72sectors",
+  "original_results_unmodified": true,
+  "scientific_bird_module": "model8_code/model8_meso_response.py (SHA-256 verified)",
+  "original_confirmation_procedure": "20 independent batches x 5000, seeds 20042..20061",
+  "confirmation_batches": 20,
+  "trajectories_per_batch": 5000,
+  "seeds": [
+    20042,
+    20043,
+    20044,
+    20045,
+    20046,
+    20047,
+    20048,
+    20049,
+    20050,
+    20051,
+    20052,
+    20053,
+    20054,
+    20055,
+    20056,
+    20057,
+    20058,
+    20059,
+    20060,
+    20061
+  ],
+  "response_probabilities": [
+    0.6,
+    0.0
+  ],
+  "same_trajectories_per_batch_used_for_both_layouts_and_probabilities": true,
+  "physical_site_m": [
+    6000.0,
+    6000.0
+  ],
+  "bird_heading_deg_toward": 225.0,
+  "corridor": "cross-flight widened uniformly for both endpoints, 1 m outer safety",
+  "original_width_m": 8485.28137423857,
+  "common_width_m": 8787.57961404495,
+  "common_cross_min_m": -4468.177348200846,
+  "common_cross_max_m": 4319.4022658441045,
+  "longitudinal_margin_m": 2422.4,
+  "SD_10k_method": "10 independent groups pairing successive 5000-bird batches",
+  "uncertainty": "two-sided Student-t 95% interval on paired differences across 20 batches",
+  "mean_Q_times_W_units": "encounters*m per entering bird (scaled corridor-normalised encounter measure)",
+  "reference_for_training_objective_unchanged": 0.6854,
+  "software_versions": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "pymoo": "0.6.1.5",
+    "floris": "4.6.5"
+  },
+  "source_run_settings_sha256": "760f71b33d35bafff60038a8a3d4c411d17cea9573d1630dd4b4a814789b91d7",
+  "source_endpoint_verification_sha256": "fde367f76d3e3ef44d280146302c89080fa1b6bebcdbdb0e8f1b1d79e9d870e7",
+  "original_simulator_sha256": "f4ed591b2a5e69b84258f230db68a97beca0d4f4102cdf5fc46d24eace7184c4",
+  "completed_utc": "2026-10-19T07:55:45.289800+00:00"
+}

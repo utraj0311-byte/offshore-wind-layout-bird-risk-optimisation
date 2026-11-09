@@ -1,0 +1,11 @@
+{
+  "terminology": "Optimisation sample; independent evaluation sample",
+  "non_dominated_layouts": 36,
+  "highest_aep_gwh": 828.6682186435138,
+  "lowest_risk_Q_4b": 0.0007365695079398473,
+  "generations": 100,
+  "function_evaluations": 8000,
+  "final_population_size": 80,
+  "original_followup_validation": "5 x 10000; not run by this production driver",
+  "independent_confirmation": "Not run; protocol is 15 x 100000 birds/layout with paired p=0.6, p=0 and fixed height z=150 m"
+}

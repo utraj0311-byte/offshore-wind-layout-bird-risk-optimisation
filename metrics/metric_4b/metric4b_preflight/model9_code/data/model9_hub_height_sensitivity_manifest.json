@@ -1,0 +1,114 @@
+{
+  "design_version": "Model 9 fixed-hub-height sensitivity v1",
+  "purpose": "Test whether the frozen layouts have a detectable horizontal rotor-transit geometry difference when vertical exposure is guaranteed by fixing every trajectory at the 150 m hub height.",
+  "analysis_provenance": {
+    "analysis_plan_frozen_before_final_sensitivity_run": true,
+    "development_pilot_used_to_choose_primary_comparison_and_sample_size": true,
+    "development_pilot_included_in_final_inference": false,
+    "development_pilot": {
+      "batch_count": 5,
+      "trajectories_per_batch": 5000,
+      "trajectory_seeds": [70142, 70143, 70144, 70145, 70146],
+      "flight_height_seeds": [80142, 80143, 80144, 80145, 80146],
+      "qualitative_result": "The original layout had lower mean hub-height exposure than pareto_032; pareto_037 and pareto_038 were not clearly lower than pareto_032. These pilot data are excluded from the final test."
+    }
+  },
+  "scenario": {
+    "height_rule": "all trajectories fixed at hub height",
+    "hub_height_m": 150.0,
+    "rotor_diameter_m": 242.24,
+    "lower_tip_height_m": 28.88,
+    "upper_tip_height_m": 271.12,
+    "rotor_plane_heading_deg_toward": 225.0,
+    "interpretation": "controlled maximum-cross-section geometry sensitivity; not an empirical bird-species flight-height model"
+  },
+  "required_inputs": {
+    "floris_config_sha256": "f6b788df9e38f006dfb6c68ddfb80ab090dad9cd555982a8d5c5e4b0c2f2d364",
+    "turbine_reference_sha256": "93d2bcfcb619b1819efe8149ce9e8231656e51a29f2ae5c1079a46e339f02feb",
+    "floris_condition_count": 84
+  },
+  "final_design": {
+    "batch_count": 15,
+    "trajectories_per_batch": 20000,
+    "total_trajectories_per_layout": 300000,
+    "total_layout_trajectory_simulations": 1200000,
+    "trajectory_seeds": [
+      90142,
+      90143,
+      90144,
+      90145,
+      90146,
+      90147,
+      90148,
+      90149,
+      90150,
+      90151,
+      90152,
+      90153,
+      90154,
+      90155,
+      90156
+    ],
+    "flight_height_seeds": [
+      100142,
+      100143,
+      100144,
+      100145,
+      100146,
+      100147,
+      100148,
+      100149,
+      100150,
+      100151,
+      100152,
+      100153,
+      100154,
+      100155,
+      100156
+    ],
+    "primary_test": {
+      "first_candidate": "original_energy_layout",
+      "second_candidate": "pareto_032",
+      "paired_difference": "E_RT_CE(original_energy_layout) - E_RT_CE(pareto_032)",
+      "confidence_level": 0.95,
+      "method": "two-sided paired Student-t interval across 15 independent common-random-number batches",
+      "tradeoff_gate": "pass only when the interval upper bound is below zero and the original layout AEP is lower than pareto_032 AEP"
+    },
+    "secondary_tests": "All other pairwise layout comparisons are descriptive and do not receive unadjusted confirmatory claims."
+  },
+  "candidates": [
+    {
+      "candidate_id": "original_energy_layout",
+      "role": "pre-optimisation benchmark and pilot-selected lower-exposure side of the primary comparison",
+      "layout_csv": "data/energy_endpoint_layout.csv",
+      "layout_sha256": "53f37f2004c873104f55a840c7e433a2152020f63ecf0b7650c9da2c109b1744",
+      "expected_aep_gwh": 847.555657223372
+    },
+    {
+      "candidate_id": "pareto_032",
+      "role": "highest-AEP frozen full-run reference and primary comparison baseline",
+      "layout_csv": "data/confirmation_pareto_032.csv",
+      "layout_sha256": "fb67ce6793da919ad1e377bb9d1d18e59529e5ea662a47a982154539406737e9",
+      "expected_aep_gwh": 849.4227121750812
+    },
+    {
+      "candidate_id": "pareto_037",
+      "role": "descriptive high-energy frozen Model 9 candidate",
+      "layout_csv": "data/confirmation_pareto_037.csv",
+      "layout_sha256": "ee7e14000f2d17fded35617d6babd296dc1cad635be9a0dae88dc23d5694a1c7",
+      "expected_aep_gwh": 849.2639085611462
+    },
+    {
+      "candidate_id": "pareto_038",
+      "role": "descriptive lower-energy frozen Model 9 candidate",
+      "layout_csv": "data/confirmation_pareto_038.csv",
+      "layout_sha256": "e5b18cc530ee1ac44a76fffac132714021247d692a8297a4e880cec9bc812d7d",
+      "expected_aep_gwh": 828.8102814758402
+    }
+  ],
+  "locked_scientific_boundary": {
+    "unchanged_from_model9": "Model 8 horizontal trajectories, meso-response parameters, turbine geometry, rotor-plane heading, FLORIS AEP model and all four layouts",
+    "changed_for_sensitivity_only": "The northern-gannet FHD is replaced by one deterministic height at the rotor centre.",
+    "excluded_claims": "This scenario is not a species prediction, collision probability, fatality estimate or mortality estimate."
+  }
+}

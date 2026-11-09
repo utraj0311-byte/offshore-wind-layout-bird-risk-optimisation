@@ -1,0 +1,6 @@
+# Direct package versions recorded by the completed 1-degree Metric 1a run.
+# Python interpreter: 3.11.15 (Windows). This is NOT a full transitive pip lockfile.
+numpy==2.4.6
+pandas==3.0.3
+matplotlib==3.11.0
+pymoo==0.6.1.5

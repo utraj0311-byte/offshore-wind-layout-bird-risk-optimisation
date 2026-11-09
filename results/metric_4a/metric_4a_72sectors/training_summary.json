@@ -1,0 +1,9 @@
+{
+  "non_dominated_layouts": 38,
+  "highest_aep_gwh": 831.4654021246256,
+  "lowest_risk_Q_4a": 0.1058,
+  "generations": 100,
+  "final_population_size": 80,
+  "fresh_validation": "To be evaluated separately on original seeds 10042-10044",
+  "independent_confirmation": "Not yet run; original protocol seeds 20042-20061"
+}

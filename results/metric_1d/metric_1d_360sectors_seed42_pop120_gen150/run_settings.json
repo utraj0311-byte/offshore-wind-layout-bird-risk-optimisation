@@ -1,0 +1,221 @@
+{
+  "run_status": "complete",
+  "metric": "1d",
+  "model_name": "point_hotspot",
+  "energy_model": "Jensen top-hat; hub-centre wake overlap",
+  "site": {
+    "width_m": 6000.0,
+    "height_m": 6000.0,
+    "n_turbines": 12,
+    "minimum_spacing_D": 4.0,
+    "minimum_spacing_m": 960.0
+  },
+  "turbine": {
+    "rotor_diameter_m": 240.0,
+    "rotor_radius_m": 120.0,
+    "rated_power_mw": 15.0,
+    "hub_height_m": 150.0,
+    "cut_in_ms": 3.0,
+    "rated_ms": 10.6,
+    "cut_out_ms": 25.0
+  },
+  "wind": {
+    "n_sectors": 360,
+    "sector_width_deg": 1.0,
+    "wind_from_deg": 225.0,
+    "speed_bins_ms": [
+      4.0,
+      6.0,
+      8.0,
+      10.0,
+      12.0,
+      14.0,
+      16.0
+    ],
+    "weibull_k": 2.0,
+    "weibull_A_ms": 10.0,
+    "direction_weights_formula": "exp(2*cos(delta_from_225deg))/sum_over_sectors",
+    "speed_weights_formula": "discrete Weibull PDF, renormalized"
+  },
+  "wake": {
+    "kw": 0.04,
+    "wake_radius": "D/2 + kw*downstream_distance",
+    "wake_interaction": "hub-centre falls within top-hat cone",
+    "deficit_combination": "root-sum-square, clipped at 0.95",
+    "ct_from_undisturbed_wind_ms": "0.8 for 3<=U<10.6, 0.25 for 10.6<=U<=25, otherwise 0"
+  },
+  "bird": {
+    "risk_high": 1000.0,
+    "risk_low": 0.0,
+    "risk_multiplier": 1.0,
+    "central_corridor_width_m": 3000.0,
+    "gaussian_sigma_m": 2000.0,
+    "risk_normalization_reference": 12000.0
+  },
+  "objective_scaling": {
+    "aep_ref_gwh": 754.4007727706155,
+    "aep_ref_origin": "reconstructed from archived objective columns; physical source unknown",
+    "aep_min_gwh": 377.20038638530775,
+    "aep_max_gwh": 754.4007727706155,
+    "f1": "1-(AEP-0.5*AEP_ref)/(0.5*AEP_ref) = 2-2*AEP/AEP_ref",
+    "f2": "Q/12000"
+  },
+  "optimizer": {
+    "name": "NSGA-II",
+    "library": "pymoo",
+    "expected_pymoo_version": "0.6.1.5",
+    "population": 120,
+    "generations": 150,
+    "seed": 42,
+    "eliminate_duplicates": true,
+    "sampling_class": "run_validation.GridSampling",
+    "sampling_rule": "1a: 50% random/50% jittered grid; 1b-1d: 40% risk-aware/30% random/30% jittered grid",
+    "sampler_corridor_width_m": 1200.0,
+    "sampler_hotspot_exclusion_radius_m": 900.0,
+    "crossover_class": "pymoo.operators.crossover.sbx.SBX",
+    "mutation_class": "pymoo.operators.mutation.pm.PM",
+    "selection_class": "pymoo.operators.selection.tournament.TournamentSelection",
+    "survival_class": "pymoo.operators.survival.rank_and_crowding.classes.RankAndCrowding",
+    "operator_parameters": "Unmodified installed-pymoo NSGA-II defaults; inspect snapshots and installed version",
+    "operator_snapshots": {
+      "selection": {
+        "class": "pymoo.operators.selection.tournament.TournamentSelection",
+        "repair": null
+      },
+      "crossover": {
+        "class": "pymoo.operators.crossover.sbx.SBX",
+        "prob": {
+          "wrapper": "pymoo.core.variable.Real",
+          "value": 0.9
+        },
+        "prob_var": {
+          "wrapper": "pymoo.core.variable.Real",
+          "value": 0.5
+        },
+        "eta": {
+          "wrapper": "pymoo.core.variable.Real",
+          "value": 15
+        },
+        "n_offsprings": 2,
+        "n_parents": 2,
+        "repair": null
+      },
+      "mutation": {
+        "class": "pymoo.operators.mutation.pm.PM",
+        "prob": {
+          "wrapper": "pymoo.core.variable.Real",
+          "value": 0.9
+        },
+        "prob_var": null,
+        "eta": {
+          "wrapper": "pymoo.core.variable.Real",
+          "value": 20
+        },
+        "repair": null
+      },
+      "survival": {
+        "class": "pymoo.operators.survival.rank_and_crowding.classes.RankAndCrowding"
+      }
+    },
+    "hv_reference": [
+      1.2,
+      1.2
+    ]
+  },
+  "environment": {
+    "python": "3.11.15",
+    "pymoo": "0.6.1.5",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "matplotlib": "3.11.0",
+    "platform": "Windows-10-10.0.22621-SP0"
+  },
+  "file_sha256": {
+    "config.py": "f4348525c07e0e4d02ac8589a97bc6d764a951ff3122fea7a46275c28c6215f6",
+    "wake.py": "122f6f86863cb85bfe4da21d4e5433ea7d0b28dc892356cd12da47ed73c070d8",
+    "hypothetical_risk.py": "c49b0d07720c72996dbee08e19b8cff3fac88c29a22f28df7c326dc9c3df6d90",
+    "validation_problem.py": "4f80ef448b32456116c24abea9bbb8b692e69e76634660c27ab6ef51866e6817",
+    "run_validation.py": "e86b0cea38e8900aa82db092ffd5011ab5f95c76934cb2c830786e76c51cd981",
+    "run_jensen_1deg.py": "50a47c19e17f1924f661aa0152878be3b01442e8976cebe1716e93fe095c69ff"
+  },
+  "approval": {
+    "approved_on": "2026-10-16",
+    "previous_2degree_1a": "retained as diagnostic only; NOT final",
+    "authorised_metrics": [
+      "1a",
+      "1b",
+      "1c",
+      "1d"
+    ],
+    "selected_direction_resolution_deg": 1.0,
+    "selected_direction_sectors": 360,
+    "selected_by": "2-degree 1a freshly optimised endpoint failed 2-vs-1-degree 0.2% convergence; user approved 1-degree reruns",
+    "floris_direction_sectors_unchanged": 72
+  },
+  "reporting_aep": {
+    "resolution_deg": 1.0,
+    "n_sectors": 360,
+    "source": "independent Jensen 1-degree evaluations of ALL final Pareto layouts",
+    "optimisation_resolution_deg": 1.0,
+    "delta_vs_optimisation": "reported minus optimisation (GWh)",
+    "status": "complete",
+    "results_file": "pareto_aep_reported_1deg.csv",
+    "max_abs_delta_pct_of_optimisation": 0.0
+  },
+  "post_run_endpoint_verification": {
+    "resolution_deg": 0.5,
+    "n_sectors": 720,
+    "anchors": [
+      "energy_optimal",
+      "collision_optimal"
+    ],
+    "relative_difference_denominator": "0.5-degree AEP",
+    "pass_rule": "abs(AEP_1deg-AEP_0p5deg)/abs(AEP_0p5deg)*100 < 0.2",
+    "status": "pass",
+    "max_abs_delta_pct_of_0p5deg": 0.0884741282385052,
+    "results_file": "endpoint_0p5deg_convergence.csv",
+    "results": [
+      {
+        "anchor": "energy_optimal",
+        "layout_id": 50,
+        "aep_optimisation_1deg_gwh": 734.7418306942395,
+        "aep_reported_1deg_gwh": 734.7418306942395,
+        "aep_check_0p5deg_gwh": 734.0923488880952,
+        "delta_reported_minus_optimisation_gwh": 0.0,
+        "abs_delta_1deg_vs_0p5deg_gwh": 0.6494818061443084,
+        "abs_delta_pct_of_0p5deg": 0.0884741282385052,
+        "threshold_pct_strict": 0.2,
+        "convergence_pass": true,
+        "risk_Q": 2590.2498917337407
+      },
+      {
+        "anchor": "collision_optimal",
+        "layout_id": 32,
+        "aep_optimisation_1deg_gwh": 728.8950735515448,
+        "aep_reported_1deg_gwh": 728.8950735515448,
+        "aep_check_0p5deg_gwh": 729.0477673479105,
+        "delta_reported_minus_optimisation_gwh": 0.0,
+        "abs_delta_1deg_vs_0p5deg_gwh": 0.15269379636572467,
+        "abs_delta_pct_of_0p5deg": 0.020944278715945553,
+        "threshold_pct_strict": 0.2,
+        "convergence_pass": true,
+        "risk_Q": 2135.823192221522
+      }
+    ]
+  },
+  "output_policy": "unique 360-sector output directory, no overwrite; STOP on convergence failure",
+  "output_files": [
+    "run_settings.json",
+    "pareto_points.csv",
+    "pareto_full.npz",
+    "pareto_layouts_long.csv",
+    "anchor_summary.csv",
+    "layout_*.csv",
+    "hypervolume.csv",
+    "pareto_aep_reported_1deg.csv",
+    "endpoint_0p5deg_convergence.csv",
+    "layout_*.png/pdf",
+    "metric_1{a,b,c,d}_pareto.png/pdf"
+  ],
+  "non_dominated_layouts_saved": 68
+}

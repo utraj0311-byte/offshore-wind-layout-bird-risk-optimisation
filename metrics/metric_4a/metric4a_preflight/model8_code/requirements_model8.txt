@@ -1,0 +1,7 @@
+numpy
+pandas
+matplotlib
+scipy
+pymoo
+floris==4.6.5
+PyYAML

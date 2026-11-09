@@ -1,0 +1,172 @@
+{
+  "status": "completed",
+  "batch_count": 10,
+  "birds_per_batch": 50000,
+  "primary_comparisons": [
+    {
+      "analysis": "primary",
+      "response_probability": 0.6,
+      "layout_a": "highest_aep",
+      "layout_b": "combined_lowest_risk",
+      "mean_A_minus_B": 5.295228119686282e-05,
+      "ci95_lower": 5.1953705163358365e-05,
+      "ci95_upper": 5.395085723036728e-05,
+      "relative_difference_pct_of_B": 172.21446299281163,
+      "ci_contains_zero": false
+    },
+    {
+      "analysis": "primary",
+      "response_probability": 0.6,
+      "layout_a": "highest_aep",
+      "layout_b": "balanced",
+      "mean_A_minus_B": 2.725943071434935e-05,
+      "ci95_lower": 2.628591561086998e-05,
+      "ci95_upper": 2.823294581782872e-05,
+      "relative_difference_pct_of_B": 48.29745248096293,
+      "ci_contains_zero": false
+    },
+    {
+      "analysis": "primary",
+      "response_probability": 0.6,
+      "layout_a": "highest_aep",
+      "layout_b": "reference",
+      "mean_A_minus_B": 5.298127566206694e-05,
+      "ci95_lower": 5.179777389816036e-05,
+      "ci95_upper": 5.416477742597352e-05,
+      "relative_difference_pct_of_B": 172.4713966318303,
+      "ci_contains_zero": false
+    },
+    {
+      "analysis": "primary",
+      "response_probability": 0.6,
+      "layout_a": "balanced",
+      "layout_b": "reference",
+      "mean_A_minus_B": 2.5721844947717584e-05,
+      "ci95_lower": 2.496181027540429e-05,
+      "ci95_upper": 2.648187962003088e-05,
+      "relative_difference_pct_of_B": 83.73302580285905,
+      "ci_contains_zero": false
+    },
+    {
+      "analysis": "primary",
+      "response_probability": 0.6,
+      "layout_a": "combined_lowest_risk",
+      "layout_b": "reference",
+      "mean_A_minus_B": 2.8994465204113378e-08,
+      "ci95_lower": -6.353311697337949e-07,
+      "ci95_upper": 6.933201001420215e-07,
+      "relative_difference_pct_of_B": 0.09438647608718882,
+      "ci_contains_zero": true
+    },
+    {
+      "analysis": "primary",
+      "response_probability": 0.0,
+      "layout_a": "highest_aep",
+      "layout_b": "combined_lowest_risk",
+      "mean_A_minus_B": -3.96035632449737e-09,
+      "ci95_lower": -1.603450328780167e-08,
+      "ci95_upper": 8.113790638806932e-09,
+      "relative_difference_pct_of_B": -0.0020439155473671606,
+      "ci_contains_zero": true
+    },
+    {
+      "analysis": "primary",
+      "response_probability": 0.0,
+      "layout_a": "highest_aep",
+      "layout_b": "balanced",
+      "mean_A_minus_B": -1.374359462455628e-09,
+      "ci95_lower": -1.0967286624962596e-08,
+      "ci95_upper": 8.218567700051338e-09,
+      "relative_difference_pct_of_B": -0.0007093079343640813,
+      "ci_contains_zero": true
+    },
+    {
+      "analysis": "primary",
+      "response_probability": 0.0,
+      "layout_a": "highest_aep",
+      "layout_b": "reference",
+      "mean_A_minus_B": -9.485558203644164e-09,
+      "ci95_lower": -1.8539694193996447e-08,
+      "ci95_upper": -4.314222132918805e-10,
+      "relative_difference_pct_of_B": -0.004895298672907379,
+      "ci_contains_zero": false
+    },
+    {
+      "analysis": "primary",
+      "response_probability": 0.0,
+      "layout_a": "balanced",
+      "layout_b": "reference",
+      "mean_A_minus_B": -8.111198741188537e-09,
+      "ci95_lower": -2.1324649252687826e-08,
+      "ci95_upper": 5.1022517703107516e-09,
+      "relative_difference_pct_of_B": -0.004186020430318345,
+      "ci_contains_zero": true
+    },
+    {
+      "analysis": "primary",
+      "response_probability": 0.0,
+      "layout_a": "combined_lowest_risk",
+      "layout_b": "reference",
+      "mean_A_minus_B": -5.525201879146794e-09,
+      "ci95_lower": -1.831303359295966e-08,
+      "ci95_upper": 7.262629834666073e-09,
+      "relative_difference_pct_of_B": -0.0028514414065944522,
+      "ci_contains_zero": true
+    }
+  ],
+  "all_five_primary_p0_intervals_contain_zero": false,
+  "p0_control": "p=0 expected layout-invariant when all rotor intercept areas lie within full corridor",
+  "corridor_coverage": {
+    "reference": {
+      "minimum_rotor_edge_margin_m": 1282.7433220855105,
+      "all_rotor_discs_covered": true
+    },
+    "highest_aep": {
+      "minimum_rotor_edge_margin_m": 157.7148927858001,
+      "all_rotor_discs_covered": true
+    },
+    "balanced": {
+      "minimum_rotor_edge_margin_m": 488.25348671612926,
+      "all_rotor_discs_covered": true
+    },
+    "new_lowest_risk": {
+      "minimum_rotor_edge_margin_m": 1214.1320353253395,
+      "all_rotor_discs_covered": true
+    },
+    "v3_eval_376": {
+      "minimum_rotor_edge_margin_m": 1202.8613209557761,
+      "all_rotor_discs_covered": true
+    },
+    "combined_lowest_risk": {
+      "minimum_rotor_edge_margin_m": 1156.9774040397047,
+      "all_rotor_discs_covered": true
+    }
+  },
+  "seeds": {
+    "trajectory": [
+      915101,
+      915102,
+      915103,
+      915104,
+      915105,
+      915106,
+      915107,
+      915108,
+      915109,
+      915110
+    ],
+    "height": [
+      916101,
+      916102,
+      916103,
+      916104,
+      916105,
+      916106,
+      916107,
+      916108,
+      916109,
+      916110
+    ]
+  },
+  "elapsed_since_current_start_h": 4.546652593507121
+}

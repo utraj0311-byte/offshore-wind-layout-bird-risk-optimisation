@@ -1,0 +1,146 @@
+{
+  "purpose": "Guarded four-layout independent confirmation: recalculate two exact controls every batch; no statistics on mismatch",
+  "optimisation_samples_identical_across_seeds": true,
+  "combined_feasible_count": 513,
+  "combined_nondominated_count": 24,
+  "selected": {
+    "highest_aep": {
+      "aep_gwh": 823.0822640294288,
+      "optimisation_sample_q": 8.5322223718665e-05,
+      "seed": 730101,
+      "eval": 455,
+      "rotor_edge_margin_m": 157.7148927858001,
+      "coordinates_sha256": "8b9a62987f6e62610c824b449a0393e106c55af0b7fb6348698794f02a14d3c5"
+    },
+    "knee": {
+      "aep_gwh": 821.3442419232357,
+      "optimisation_sample_q": 6.124694896392856e-05,
+      "seed": 730103,
+      "eval": 418,
+      "rotor_edge_margin_m": 214.8396230518273,
+      "coordinates_sha256": "8a4cd7de9e2f9c0f4635af6ecf7aca5a1b2c2280f8278b7934b35813264393a7"
+    },
+    "lowest_risk": {
+      "aep_gwh": 807.5716007926734,
+      "optimisation_sample_q": 2.9456101769728496e-05,
+      "seed": 730103,
+      "eval": 220,
+      "rotor_edge_margin_m": 1132.6870719554463,
+      "coordinates_sha256": "4a3c4b68f52e40bbc71cd7fd34921077654f52e1b53abe1bcf7c4fb0390abb93"
+    },
+    "reference": {
+      "aep_gwh": 804.3901377275079,
+      "optimisation_sample_q": 3.20618950134584e-05,
+      "seed": null,
+      "eval": null,
+      "rotor_edge_margin_m": 1282.7433220855105,
+      "coordinates_sha256": "3fe119a9bef78282408aab1c224853090c5b88a7299461c14aa03ec4cc4d59ba"
+    }
+  },
+  "response_probabilities": [
+    0.6,
+    0.0
+  ],
+  "trajectory_seeds": [
+    915101,
+    915102,
+    915103,
+    915104,
+    915105,
+    915106,
+    915107,
+    915108,
+    915109,
+    915110
+  ],
+  "height_seeds": [
+    916101,
+    916102,
+    916103,
+    916104,
+    916105,
+    916106,
+    916107,
+    916108,
+    916109,
+    916110
+  ],
+  "birds_per_batch": 50000,
+  "batch_count": 10,
+  "original_data_sha256": "deec24d3d92239f263845456910a138f599b7e335aa634530deef419f2107ce8",
+  "original_plan_sha256": "ecea9f07d8d09bad0cc7698413a2a5f5b2c8366b1c1126ca4a95a2a63ec40171",
+  "layout_order": [
+    "reference",
+    "highest_aep",
+    "knee",
+    "lowest_risk"
+  ],
+  "control_layouts": [
+    "reference",
+    "highest_aep"
+  ],
+  "exact_reproduction_policy": "Each of 10 batches x 2 controls x 2 response probabilities: float(Q_lit_new)==float(Q_lit_archived), no tolerance. Stop on first mismatch before comparisons.",
+  "optimisation_inputs_sha256": {
+    "730101_run_settings.json": "63a1e73212b92147ff9773046bd29e34c0712cc03cdf2fd90188d70bd9da7094",
+    "730101_pareto_training.csv": "510cf96ac6166c61737053096dc2378a2eace78c5d0f528299c522944eebda40",
+    "730101_all_evaluated_candidates.csv": "52ec4a068125e0f454b7cbeed998f0ae1fcf975537e201c85afe04dafb78a26b",
+    "730102_run_settings.json": "23fcd07583a72f90123ec74d5f769f9951807c7399c03dbb19c6bbc096c90d7c",
+    "730102_pareto_training.csv": "2c3f4298bab547d8d6b2d16d39ab3a3b8da22c4131a9e59483135409faa15ea5",
+    "730102_all_evaluated_candidates.csv": "1fb3ec21175fc67afec5b5262e3f4d57346c2065141169f80925d722b97b6a64",
+    "730103_run_settings.json": "67c9b18f8bd09d456161e5be96b3626dc80ed94251dd870205a3b630e789dbae",
+    "730103_pareto_training.csv": "94707434315bd88503373b42d62d74dbe9ec30f855834df9d3f75403b118394f",
+    "730103_all_evaluated_candidates.csv": "db7cb62bd5fb89e8e28bd63ac731e9c295d14cf30c0acb613c23af44cd5ab1b5"
+  },
+  "code_sources_sha256": {
+    "runner": "ae24d1e13bdd5b98e9781bececf5db49deba6feab2e91f3218632ca2456c4c03",
+    "confirmation": "0d1deb9b6e6d591adc1314bd31c12c93bfc3c11558d28bf34e8e58d8618af1af",
+    "model10_objective": "387518eb9e50feb8460b5cac535e814e6e6e90fe9d33b34df71a823070a087b2",
+    "model10_band": "2c095e33563323fb60a8e7d70cb3ab7b5a9672adbf0df98da32d006fa7ed96e0",
+    "model10_baseline_runner": "c024f4b87d168b21b790e98204db1ca069463fb68624574c957e0f1e273300bb",
+    "model8": "2d9985f6c165a83fac5ed1493cefa1a65e8082a39d17e80e3776be12257e823d",
+    "model8_sampler": "d8f69ac2713be1553e9cc5ac60f5c2f0660d3ba397b35a7d872688e64c3e0510",
+    "model8_validation": "2e4205203858befa3527f310c8d706bb66c48fbcb0813c4e66485c55edabded7",
+    "model9": "3c821d5f62de8b292bc00190ae71ae1379be64ad4cd11c67dc631186b5650f09",
+    "config": "df56f80c33f8912eb44ef6380451d762ba71aabcd0aa002186bf506618fb074e",
+    "floris_wrapper": "686cfcb8d159dd6ac8e7ed2f4f3e612db8257a7c96709ab1c8d294b50bddd7a2",
+    "floris_config": "f6b788df9e38f006dfb6c68ddfb80ab090dad9cd555982a8d5c5e4b0c2f2d364",
+    "gannet_FHD": "adc9ea903db9c8e34bfe5b88c382381b737c2e676d79af437f66d198208a0f2c",
+    "blade_source": "1f39765f76c46d64de7adf1a18e00e2a372e14d737b03ef09f8f397ddacc5b27",
+    "reference_layout": "c1f506d3a9bed5cf16c6ae9074b541fb959bcc41e7ce14c347b34fec02d2f265",
+    "band_checks": "641b7c2bd0941e68e3bb0e363351f5a8e29a892073fc54254b5a9e5f03c2e8c6",
+    "rotor_incidence_checks": "25eabc5b296b0ad3041f587016c17de9bae489f2f7e290eae39c5b34ccf83f70",
+    "integration_checks": "11b1df6a71f059c67b10ba6708ca233d1a8bfebce72ea92e4d8aa6577a3ecc5e",
+    "model9_checks": "5d90eff89284e7908da1ee668407ab5ca1c8f83dde8bfefd328dc82a2c9be54e",
+    "preedit_snapshot": "a220899f04018857f195c5382b243b8413dcaab6e5c61cd83771499b32844400",
+    "preedit_path_coordinates": "ab31299acfa1919fda8c78897a03dae6c1f459e628f760acdc04b02a3fd68c6d",
+    "portable_snapshot_checks": "37e347ef9624996109556ae3b770344bf109951f911cf423479a393cc87ba609",
+    "floris_turbine": "93d2bcfcb619b1819efe8149ce9e8231656e51a29f2ae5c1079a46e339f02feb"
+  },
+  "primary_comparisons": [
+    [
+      "highest_aep",
+      "knee"
+    ],
+    [
+      "knee",
+      "lowest_risk"
+    ],
+    [
+      "highest_aep",
+      "lowest_risk"
+    ],
+    [
+      "highest_aep",
+      "reference"
+    ],
+    [
+      "knee",
+      "reference"
+    ],
+    [
+      "lowest_risk",
+      "reference"
+    ]
+  ],
+  "statistics": "For each probability: 6 paired tests over 10 batches; Bonferroni 95%-simultaneous CIs and Holm-adjusted p-values (df=9)."
+}

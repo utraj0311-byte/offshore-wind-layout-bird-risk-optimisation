@@ -1,0 +1,36 @@
+{
+  "terminology": "optimisation sample / independent evaluation sample",
+  "status": "completed",
+  "first_trajectory_seed": 30142,
+  "first_height_seed": 40142,
+  "n_batches": 15,
+  "n_per_batch": 100000,
+  "subsample_size": 10000,
+  "response_probabilities": [
+    0.6,
+    0.0
+  ],
+  "fixed_height_m": 150.0,
+  "corridor": {
+    "original_min": -4242.640687119286,
+    "original_max": 4242.640687119285,
+    "original_width": 8485.28137423857,
+    "common_min": -4243.640687119286,
+    "common_max": 4333.438908505309,
+    "common_width": 8577.079595624595,
+    "margin_by_layout": {
+      "highest-AEP": -89.79822138602424,
+      "lowest-risk": 1139.601758209632
+    },
+    "enlarged": true
+  },
+  "source_FHD_sha256": "adc9ea903db9c8e34bfe5b88c382381b737c2e676d79af437f66d198208a0f2c",
+  "source_run_settings_sha256": "5d608894f9104c639020cbc207b7db84e59ffb1231adff62a5e5764e80fc54a8",
+  "two_layouts": {
+    "highest-AEP": "07bb0c2c7008d9612ea3813238962124e91ef6be4f0b59219ee787d763df30cd",
+    "lowest-risk": "9c54e7f63c4ce9211e2a185c24a1995aa36742723fd6e48a10db687a8f65be94"
+  },
+  "original_model9_source_unchanged": true,
+  "note": "Conditional expected rotor transits per entering bird, not blade strikes. Corridor correction affects evaluation only, not optimisation.",
+  "elapsed_minutes": 126.17634359499984
+}

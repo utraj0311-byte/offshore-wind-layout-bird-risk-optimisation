@@ -1,0 +1,5 @@
+layout,saved_Q_3a,recomputed_Q_3a,absolute_difference,passed
+random_start,7.6884143141225927,7.6884143141225927,0,True
+aligned_start,5.4605551185578518,5.4605551185578518,0,True
+aligned_reference,5.5254070123912227,5.5254070123912227,0,True
+cross_flow_reference,9.5607256713505038,9.5607256713505038,0,True

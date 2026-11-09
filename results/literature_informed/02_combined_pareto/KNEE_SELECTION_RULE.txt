@@ -1,0 +1,3 @@
+Final three-seed 72-sector non-dominated set. AEP maximised, optimisation-sample Q_lit minimised.
+a=(AEP-AEP_lowrisk)/(AEP_highAEP-AEP_lowrisk); r=(Q-Q_lowrisk)/(Q_highAEP-Q_lowrisk); d=(a-r)/sqrt(2). Max positive d selects knee.
+Reference is not part of combined Pareto front. 730101/465 is intermediate (diagnostic), not knee.

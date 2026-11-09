@@ -1,0 +1,3 @@
+anchor,layout_id,aep_optimisation_1deg_gwh,aep_reported_1deg_gwh,aep_check_0p5deg_gwh,delta_reported_minus_optimisation_gwh,abs_delta_1deg_vs_0p5deg_gwh,abs_delta_pct_of_0p5deg,threshold_pct_strict,convergence_pass,risk_Q
+energy_optimal,50,734.741830694,734.741830694,734.092348888,0,0.649481806144,0.0884741282385,0.2,True,2590.24989173
+collision_optimal,32,728.895073552,728.895073552,729.047767348,0,0.152693796366,0.0209442787159,0.2,True,2135.82319222

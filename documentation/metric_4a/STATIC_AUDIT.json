@@ -1,0 +1,134 @@
+{
+  "archive_identity": "metric_4a_github_package",
+  "authoritative_optimisation": "metric_4a_72sectors",
+  "authoritative_sectors": 72,
+  "historical_original_sectors": 12,
+  "final_source_hashes_recorded": 14,
+  "final_source_hashes_matching": 14,
+  "source_hash_details": {
+    "config.py": {
+      "present": true,
+      "matches_original": true
+    },
+    "floris_aep.py": {
+      "present": true,
+      "matches_original": true
+    },
+    "floris_config/gch_iea15mw.yaml": {
+      "present": true,
+      "matches_original": true
+    },
+    "model10_energy_seed_layout.csv": {
+      "present": true,
+      "matches_original": true
+    },
+    "archives/original_optimisation.zip": {
+      "present": true,
+      "matches_original": true
+    },
+    "archives/original_confirmation.zip": {
+      "present": true,
+      "matches_original": true
+    },
+    "model8_code/model8_aep_problem.py": {
+      "present": true,
+      "matches_original": true
+    },
+    "model8_code/model8_batching.py": {
+      "present": true,
+      "matches_original": true
+    },
+    "model8_code/model8_meso_response.py": {
+      "present": true,
+      "matches_original": true
+    },
+    "model8_code/plot_model8_confirmation_report.py": {
+      "present": true,
+      "matches_original": true
+    },
+    "model8_code/run_model8_confirmation.py": {
+      "present": true,
+      "matches_original": true
+    },
+    "model8_code/run_model8_multiobjective.py": {
+      "present": true,
+      "matches_original": true
+    },
+    "model8_code/run_model8_validation.py": {
+      "present": true,
+      "matches_original": true
+    },
+    "metric4a_run72.py": {
+      "present": true,
+      "matches_original": true
+    }
+  },
+  "exact_module_match_with_existing_metric_3b": {
+    "config.py": true,
+    "floris_aep.py": true,
+    "floris_config/gch_iea15mw.yaml": true
+  },
+  "existing_repository_file_collisions": [],
+  "static_python_ast_parsed": 18,
+  "source_files_static_ast_parsed": [
+    "metrics/metric_4a/metric4a_preflight/metric4a_confirm72.py",
+    "metrics/metric_4a/metric4a_preflight/metric4a_preflight.py",
+    "metrics/metric_4a/metric4a_preflight/floris_aep.py",
+    "metrics/metric_4a/metric4a_preflight/config.py",
+    "metrics/metric_4a/metric4a_preflight/metric4a_postrun_checks.py",
+    "metrics/metric_4a/metric4a_preflight/metric4a_run72.py",
+    "metrics/metric_4a/plotting/metric4a_plot72_thesis_terms.py",
+    "metrics/metric_4a/plotting/plot_metric4_print_ready_local.py",
+    "metrics/metric_4a/plotting/metric4a_plot72_corridor_adjusted.py",
+    "metrics/metric_4a/metric4a_preflight/model8_code/run_model8_validation.py",
+    "metrics/metric_4a/metric4a_preflight/model8_code/plot_model8_confirmation_report.py",
+    "metrics/metric_4a/metric4a_preflight/model8_code/model8_batching.py",
+    "metrics/metric_4a/metric4a_preflight/model8_code/model8_aep_problem.py",
+    "metrics/metric_4a/metric4a_preflight/model8_code/model8_meso_response.py",
+    "metrics/metric_4a/metric4a_preflight/model8_code/run_model8_multiobjective.py",
+    "metrics/metric_4a/metric4a_preflight/model8_code/run_model8_confirmation.py",
+    "metrics/metric_4a/metric4a_preflight/model8_code/tests/test_model8_meso_response.py",
+    "metrics/metric_4a/metric4a_preflight/model8_code/tests/test_model8_confirmation.py"
+  ],
+  "original_12sector_archive_member_contents_identical_to_separately_uploaded_zip": true,
+  "historical_8a_8b_archive_evidence": "not found",
+  "training_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "three_batch_fresh_seeds_inherited_but_not_run": [
+    10042,
+    10043,
+    10044
+  ],
+  "confirmed_20_batch_seeds": [
+    20042,
+    20043,
+    20044,
+    20045,
+    20046,
+    20047,
+    20048,
+    20049,
+    20050,
+    20051,
+    20052,
+    20053,
+    20054,
+    20055,
+    20056,
+    20057,
+    20058,
+    20059,
+    20060,
+    20061
+  ],
+  "confirmation_independent_seed_sets": true,
+  "optimisation_rerun": false,
+  "bird_simulation_rerun": false,
+  "floris_evaluation_rerun": false,
+  "plots_regenerated": false
+}

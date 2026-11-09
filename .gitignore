@@ -1,0 +1,29 @@
+# Python / virtual environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Editor and OS clutter
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temporary reproduction workspaces (not archived research results)
+_replay_metric_*/
+_replay_model_*/
+_replay_*/
+_scratch_*/
+_temp_*/
+
+# Temporary downloads / exports
+*.tmp
+*.bak
+~$*

@@ -1,0 +1,188 @@
+{
+  "model8_sha256": "2d9985f6c165a83fac5ed1493cefa1a65e8082a39d17e80e3776be12257e823d",
+  "model9_sha256": "fa7bf121e63dbe30471e3e3e3a67d6c852b3b8315f76e925336533b1ef88e823",
+  "result": {
+    "summary": {
+      "N_started": 64,
+      "N_completed": 64,
+      "N_failed": 0,
+      "N_approach_events": 93,
+      "N_response_events": 58,
+      "N_enc_farm": 32,
+      "E_enc": 0.5,
+      "P_ge_1": 0.25,
+      "mean_route_extension_m": 184.7080000000558,
+      "maximum_encounters_per_trajectory": 4,
+      "per_turbine_encounters": [
+        2,
+        4,
+        2,
+        1,
+        4,
+        5,
+        4,
+        5,
+        1,
+        1,
+        1,
+        2
+      ],
+      "N_RT_farm": 0,
+      "E_RT": 0.0,
+      "P_RT": 0.0,
+      "P_height_band": 0.0625,
+      "mean_flight_height_m": 10.4375,
+      "minimum_flight_height_m": 0.0,
+      "maximum_flight_height_m": 54.0,
+      "maximum_transits_per_trajectory": 0,
+      "per_turbine_transits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "N_RT_CE_farm": 0.1346393878525357,
+      "E_RT_CE": 0.0021037404351958704,
+      "P_RT_CE": 0.0012274131120151924,
+      "per_turbine_expected_transits": [
+        0.0,
+        1.9383840168973876e-05,
+        0.023662377521675104,
+        0.0,
+        0.0005510938122785802,
+        2.820411342363549e-06,
+        0.044361778053857326,
+        0.05041340771373959,
+        0.003907131624868443,
+        0.003907131624868443,
+        0.003907131624868443,
+        0.003907131624868443
+      ]
+    },
+    "model8_fields": {
+      "per_turbine_encounters": {
+        "dtype": "int64",
+        "shape": [
+          12
+        ],
+        "sha256": "0f1c447bc229caae0776146b86affd68771c636561f5c041079add3196823d62"
+      },
+      "encounter_matrix": {
+        "dtype": "bool",
+        "shape": [
+          64,
+          12
+        ],
+        "sha256": "a7f90cbdeeff4c0ea96ed5ecc048d46395f618139d8cae3b13a6dac43b091b56"
+      },
+      "response_matrix": {
+        "dtype": "bool",
+        "shape": [
+          64,
+          12
+        ],
+        "sha256": "034dc1eea5be2500b23443c10a2f50cdbe7130375c4751a7a46b6f3384e7988a"
+      },
+      "per_trajectory_encounters": {
+        "dtype": "int64",
+        "shape": [
+          64
+        ],
+        "sha256": "cc045f62035def7038968d03ac424a5b9a1beaa5dbd64b7569a247ca9f2007cd"
+      },
+      "per_trajectory_responses": {
+        "dtype": "int64",
+        "shape": [
+          64
+        ],
+        "sha256": "a6024bb0a57f7ce8dabf51a8a8a752673ba820ef5823ccb902d1a6c7d205206c"
+      },
+      "approach_events_per_trajectory": {
+        "dtype": "int64",
+        "shape": [
+          64
+        ],
+        "sha256": "aeaf21afd3578c78a3497f6053aed4045b38d0bb60aa9fcc4a28e4dc1eb1a6e8"
+      },
+      "route_lengths_m": {
+        "dtype": "float64",
+        "shape": [
+          64
+        ],
+        "sha256": "4bb3757014720c0ab5af9867a86ad6c1f8d7d542db682f99c3e3602735632e32"
+      },
+      "straight_route_lengths_m": {
+        "dtype": "float64",
+        "shape": [
+          64
+        ],
+        "sha256": "64dde61a96802d8872a420fea5c9fd6da308abb589019623ce359724edf7fba7"
+      },
+      "completed_mask": {
+        "dtype": "bool",
+        "shape": [
+          64
+        ],
+        "sha256": "7c8975e1e60a5c8337f28edf8c33c3b180360b7279644a9bc1af3c51e6220bf5"
+      },
+      "failed_mask": {
+        "dtype": "bool",
+        "shape": [
+          64
+        ],
+        "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+      },
+      "stored_paths_m": {
+        "0": {
+          "dtype": "float64",
+          "shape": [
+            295,
+            2
+          ],
+          "sha256": "5d411a85e8903f4d6a5d1a7ca52ae2dd28800342e662884c6e3206fb313baaea"
+        },
+        "13": {
+          "dtype": "float64",
+          "shape": [
+            298,
+            2
+          ],
+          "sha256": "c022dc6663f157890553fdcc01ffdf996033ce8384fada6456c2459cd8d93767"
+        }
+      }
+    },
+    "model9_arrays": {
+      "flight_heights_m": {
+        "dtype": "float64",
+        "shape": [
+          64
+        ],
+        "sha256": "f83e909156e13bdc7f261aeba35ca0d84cd52907f0d62b51773737b7b3cc4ddc"
+      },
+      "transit_matrix": {
+        "dtype": "bool",
+        "shape": [
+          64,
+          12
+        ],
+        "sha256": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8"
+      },
+      "expected_transit_probability_matrix": {
+        "dtype": "float64",
+        "shape": [
+          64,
+          12
+        ],
+        "sha256": "0b2c6ba562995e9b85156cdedc42317b954d316c89e8557db93043584a900e2f"
+      }
+    }
+  }
+}

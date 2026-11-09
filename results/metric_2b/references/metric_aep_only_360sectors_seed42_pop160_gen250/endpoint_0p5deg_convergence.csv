@@ -1,0 +1,2 @@
+anchor,aep_optimisation_1deg_gwh,aep_reported_1deg_gwh,delta_reported_minus_optimisation_gwh,aep_check_0p5deg_gwh,abs_delta_1deg_vs_0p5deg_gwh,abs_delta_pct_of_0p5deg,threshold_pct_strict,convergence_pass
+aep_only_best,734.2243210189986,734.2243210189986,0.0,733.2543463836859,0.9699746353127239,0.13228351664010057,0.2,True

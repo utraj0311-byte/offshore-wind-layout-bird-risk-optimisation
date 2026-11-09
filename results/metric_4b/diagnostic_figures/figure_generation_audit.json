@@ -1,0 +1,20 @@
+{
+  "source": {
+    "opt": "/mnt/data/metric4b_finalwork/metric_4b_72sectors",
+    "confirmation": "/mnt/data/metric4b_finalwork/metric_4b_72sectors_confirmation"
+  },
+  "n_pareto": 36,
+  "n_evaluations": 8000,
+  "sector_count": 72,
+  "original_corridor_width_m": 8485.28137423857,
+  "independent_corridor_width_m": 8577.079595624595,
+  "width_normalisation_factor": 1.010818524140487,
+  "paired_CI_method": "Student t interval on 15 batch-wise paired differences",
+  "one_sample_SD_method": "sample SD across 150 disjoint groups of 10,000 birds",
+  "independent_batches": 15,
+  "birds_per_batch": 100000,
+  "baseline_reduction_percent": 56.8612662560044,
+  "aep_highest_GWh": 828.6682186435138,
+  "aep_lowest_GWh": 813.839651505523,
+  "result_qualification": "Only endpoints independently evaluated; width normalisation is not a new simulation"
+}

@@ -1,0 +1,76 @@
+{
+  "confirmation_design_version": "Model 9 endpoint confirmation v1",
+  "selection_locked_before_confirmation": true,
+  "source_full_run": {
+    "archive_name": "model9_nsga2_full_seed142.zip",
+    "archive_sha256": "1100f6d490e2e03a8adeb2ed0955a552a2f5e0db57f321b4ac0f193c21dc2842",
+    "model9_code_version": "v4",
+    "seed": 142,
+    "population": 80,
+    "generations": 100,
+    "function_evaluations": 8000,
+    "objective_batches": 5,
+    "objective_trajectories_per_batch": 2000,
+    "fresh_batches": 5,
+    "fresh_trajectories_per_batch": 10000
+  },
+  "primary_question": "Does pareto_037 have lower mean E_RT_CE than pareto_032 on entirely new paired trajectories while accepting its deterministic AEP reduction?",
+  "primary_test": {
+    "candidate_first": "pareto_037",
+    "candidate_second": "pareto_032",
+    "paired_difference": "E_RT_CE(pareto_037) - E_RT_CE(pareto_032)",
+    "confidence_level": 0.95,
+    "method": "two-sided paired Student-t interval across independent batches",
+    "tradeoff_gate": "pass only when the interval upper bound is below zero and pareto_037 AEP is lower than pareto_032 AEP"
+  },
+  "secondary_question": "Does pareto_032 retain lower E_RT_CE than the original energy layout while also producing more AEP?",
+  "default_confirmation_design": {
+    "batch_count": 15,
+    "trajectories_per_batch": 100000,
+    "total_trajectories_per_layout": 1500000,
+    "first_trajectory_seed": 30142,
+    "first_flight_height_seed": 40142,
+    "planning_note": "The full-pilot paired effect and variance suggest high power if Monte Carlo variation scales approximately with the inverse square root of trajectories; this is a planning approximation, not a guaranteed result."
+  },
+  "candidates": [
+    {
+      "candidate_id": "original_energy_layout",
+      "role": "pre-optimisation benchmark",
+      "layout_csv": "data/energy_endpoint_layout.csv",
+      "layout_sha256": "53f37f2004c873104f55a840c7e433a2152020f63ecf0b7650c9da2c109b1744",
+      "expected_aep_gwh": 847.555657223372
+    },
+    {
+      "candidate_id": "pareto_032",
+      "role": "full-run high-energy reference",
+      "layout_csv": "data/confirmation_pareto_032.csv",
+      "layout_sha256": "fb67ce6793da919ad1e377bb9d1d18e59529e5ea662a47a982154539406737e9",
+      "expected_aep_gwh": 849.4235542769413,
+      "full_training_E_RT_CE": 0.0007817097625411,
+      "full_fresh_E_RT_CE": 0.0009056436629537
+    },
+    {
+      "candidate_id": "pareto_037",
+      "role": "full-run high-energy apparent lower-risk candidate",
+      "layout_csv": "data/confirmation_pareto_037.csv",
+      "layout_sha256": "ee7e14000f2d17fded35617d6babd296dc1cad635be9a0dae88dc23d5694a1c7",
+      "expected_aep_gwh": 849.2622499352564,
+      "full_training_E_RT_CE": 0.0007742056589036,
+      "full_fresh_E_RT_CE": 0.0008930069156575
+    }
+  ],
+  "forbidden_reused_seed_ranges": {
+    "trajectory_seeds": [
+      [42, 46],
+      [142, 146],
+      [10042, 10046],
+      [10142, 10146]
+    ],
+    "flight_height_seeds": [
+      [10042, 10046],
+      [10142, 10146],
+      [20042, 20046],
+      [20142, 20146]
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+SHIELDING MODEL V5 - WINDOWS INSTALL AND RUN
+============================================
+
+Run every command from Anaconda Prompt with floris-env active.
+
+1. Activate the environment and go to the project folder:
+
+   conda activate floris-env
+
+   cd /d "C:\Users\Deepak\Desktop\bird_layout_opt"
+
+2. Keep the current v4 folder as a backup:
+
+   ren shielding_model_code shielding_model_code_v4_backup
+
+3. Extract Shielding_Model_Code_v5.zip inside bird_layout_opt.
+
+4. If Windows created the extra Shielding_Model_Code_v5 folder, move the
+   inner code folder into bird_layout_opt:
+
+   move "Shielding_Model_Code_v5\shielding_model_code" .
+
+   The required final location is:
+
+   C:\Users\Deepak\Desktop\bird_layout_opt\shielding_model_code
+
+5. Run all tests:
+
+   python -m unittest discover -s shielding_model_code\tests -v
+
+   Expected result: Ran 23 tests, followed by OK.
+
+6. Run the v5 smoke test:
+
+   python shielding_model_code\run_shielding_multiobjective.py --floris_config floris_config\gch_iea15mw.yaml --energy_seed_layout report_assets\model_10_final_floris\source_data\energy_endpoint_layout.csv --bird_heading_deg 225 --corridor_width_m 6000 --seed 48 --pop 20 --gen 2 --output_root results\shielding_v5_smoke
+
+7. If the smoke test succeeds, run the final refinement:
+
+   python shielding_model_code\run_shielding_multiobjective.py --floris_config floris_config\gch_iea15mw.yaml --energy_seed_layout report_assets\model_10_final_floris\source_data\energy_endpoint_layout.csv --bird_heading_deg 225 --corridor_width_m 6000 --seed 48 --pop 160 --gen 250 --save_evaluations --output_root results\shielding_v5_final
+
+8. Upload this completed folder for the final convergence review:
+
+   results\shielding_v5_final\heading225_W6000_seed48_pop160_gen250
+
+Notes
+-----
+
+- The 61 validated Pareto seeds are already inside v5. Do not copy the old
+  result folders into shielding_model_code.
+- The knee is intentionally removed.
+- Turbines are spatially matched before crossover because turbine numbers are
+  arbitrary.
+- Offspring receive minimum-spacing repair and are checked again before FLORIS.
+- Any spacing-feasible layout with a negative rotor-grid velocity is excluded.
+- The final Pareto front and hypervolume use an external archive over every
+  feasible evaluation, not just the last NSGA-II population.
+- The final run may take roughly 45 to 75 minutes. Do not close Anaconda Prompt.

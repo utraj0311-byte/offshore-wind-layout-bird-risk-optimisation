@@ -1,0 +1,5 @@
+layout,turbines_with_upstream_neighbour,qualifying_pairs,L_s_m,sigma_n_m
+random_start,8,8,1920.0,240.0
+aligned_start,10,10,1920.0,240.0
+aligned_reference,10,10,1920.0,240.0
+cross_flow_reference,6,6,1920.0,240.0

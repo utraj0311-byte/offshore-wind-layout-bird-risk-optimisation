@@ -1,0 +1,99 @@
+{
+  "model": "Model 8 FLORIS AEP versus meso-response encounters",
+  "scientific_status": "hypothetical behavioural sensitivity model",
+  "objectives": [
+    "maximise AEP",
+    "minimise encounter intensity E_enc"
+  ],
+  "not_modelled": [
+    "calibrated bird flux",
+    "flight-height overlap",
+    "rotor transit",
+    "collision probability",
+    "micro-avoidance",
+    "mortality"
+  ],
+  "seed": 42,
+  "population": 80,
+  "generations": 100,
+  "objective_batches": 5,
+  "objective_trajectories_per_batch": 2000,
+  "objective_trajectories_total": 10000,
+  "fresh_batches": 3,
+  "fresh_trajectories_per_batch": 10000,
+  "fresh_trajectories_total_per_layout": 30000,
+  "validation_z": 1.96,
+  "objective_random_number_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "fresh_random_number_seeds": [
+    10042,
+    10043,
+    10044
+  ],
+  "bird_heading_deg_toward": 225.0,
+  "problem": {
+    "problem": "Model8AEPEncounterProblem",
+    "number_of_turbines": 12,
+    "rotor_diameter_m": 242.24,
+    "minimum_spacing_D": 4.0,
+    "minimum_spacing_m": 968.96,
+    "spacing_constraint_count": 66,
+    "spacing_constraint_tolerance_m": 1e-06,
+    "aep_ceiling_gwh": 854.4956585617186,
+    "aep_loss_reference_gwh": 137.96914764866568,
+    "encounter_reference": 0.6854,
+    "objective_batch_count": 5,
+    "N_in": 10000,
+    "N_in_per_batch": [
+      2000,
+      2000,
+      2000,
+      2000,
+      2000
+    ],
+    "common_random_number_seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "behaviour": {
+      "response_probability": 0.6,
+      "response_radius_m": 484.48,
+      "encounter_radius_m": 242.24,
+      "deflection_angle_deg": 45.0,
+      "return_length_m": 1937.92,
+      "step_size_m": 48.44800000000001,
+      "max_steps_factor": 4.0,
+      "rotor_diameter_m": 242.24,
+      "response_radius_D": 2.0,
+      "encounter_radius_D": 1.0,
+      "return_length_D": 8.0,
+      "step_size_D": 0.2
+    }
+  },
+  "aep_model": {
+    "model": "FLORISAEPModel",
+    "config_path": "floris_config\\gch_iea15mw.yaml",
+    "turbine_type": "iea_15MW",
+    "floris_hub_height_m": 150.0,
+    "floris_rotor_diameter_m": 242.24,
+    "jensen_scenario_rotor_diameter_m": 242.24,
+    "number_of_direction_sectors": 12,
+    "number_of_speed_bins": 7,
+    "number_of_combined_conditions": 84,
+    "dominant_wind_from_deg": 225.0,
+    "turbulence_intensity": 0.06,
+    "hours_per_year": 8760.0,
+    "condition_frequency_sum": 1.0
+  },
+  "encounter_reference_definition": "E_enc for the no-response energy-seed layout aggregated over the same independent objective batches",
+  "energy_seed_layout": "report_assets\\model_10_final_floris\\source_data\\energy_endpoint_layout.csv",
+  "floris_config": "floris_config\\gch_iea15mw.yaml"
+}

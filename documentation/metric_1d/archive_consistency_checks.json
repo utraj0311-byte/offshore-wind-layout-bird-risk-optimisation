@@ -1,0 +1,68 @@
+{
+  "metric": "1d",
+  "verified_source_files": {
+    "config.py": {
+      "recorded_sha256": "f4348525c07e0e4d02ac8589a97bc6d764a951ff3122fea7a46275c28c6215f6",
+      "observed_sha256": "f4348525c07e0e4d02ac8589a97bc6d764a951ff3122fea7a46275c28c6215f6",
+      "match": true
+    },
+    "wake.py": {
+      "recorded_sha256": "122f6f86863cb85bfe4da21d4e5433ea7d0b28dc892356cd12da47ed73c070d8",
+      "observed_sha256": "122f6f86863cb85bfe4da21d4e5433ea7d0b28dc892356cd12da47ed73c070d8",
+      "match": true
+    },
+    "hypothetical_risk.py": {
+      "recorded_sha256": "c49b0d07720c72996dbee08e19b8cff3fac88c29a22f28df7c326dc9c3df6d90",
+      "observed_sha256": "c49b0d07720c72996dbee08e19b8cff3fac88c29a22f28df7c326dc9c3df6d90",
+      "match": true
+    },
+    "validation_problem.py": {
+      "recorded_sha256": "4f80ef448b32456116c24abea9bbb8b692e69e76634660c27ab6ef51866e6817",
+      "observed_sha256": "4f80ef448b32456116c24abea9bbb8b692e69e76634660c27ab6ef51866e6817",
+      "match": true
+    },
+    "run_validation.py": {
+      "recorded_sha256": "e86b0cea38e8900aa82db092ffd5011ab5f95c76934cb2c830786e76c51cd981",
+      "observed_sha256": "e86b0cea38e8900aa82db092ffd5011ab5f95c76934cb2c830786e76c51cd981",
+      "match": true
+    },
+    "run_jensen_1deg.py": {
+      "recorded_sha256": "50a47c19e17f1924f661aa0152878be3b01442e8976cebe1716e93fe095c69ff",
+      "observed_sha256": "50a47c19e17f1924f661aa0152878be3b01442e8976cebe1716e93fe095c69ff",
+      "match": true
+    }
+  },
+  "hash_match_count": 6,
+  "final_source_matches_prior_metric_1c_package": true,
+  "final_archives_duplicate_identical": "1d.zip == 1d(1).zip (member names and contents)",
+  "historical_model4_zip_relationship": "model4(1).zip has 11 files matching those in m4.zip; m4.zip has 3 extra plot variants",
+  "final_archive_layout_count": 68,
+  "saved_npz_shapes": {
+    "X": [
+      68,
+      24
+    ],
+    "F": [
+      68,
+      2
+    ]
+  },
+  "max_coordinate_difference_m": 9.094947017729282e-13,
+  "max_gaussian_Q_difference": 9.094947017729282e-13,
+  "max_minspacing_difference_m": 2.2737367544323206e-13,
+  "minimum_saved_spacing_m": 969.5832421081776,
+  "all_layouts_in_site_and_spacing_feasible": true,
+  "all_archived_layouts_mutually_nondominated": true,
+  "final_archive_aep_report_matches": true,
+  "fixed_energy_objective_matches": true,
+  "fixed_risk_objective_matches": true,
+  "half_degree_checks_pass": true,
+  "half_degree_differences_percent": {
+    "energy_optimal": 0.0884741282385,
+    "collision_optimal": 0.0209442787159
+  },
+  "historical_12sector_front_size": 44,
+  "historical_max_aep_gwh": 754.551441219127,
+  "historical_min_risk": 2266.166689581738,
+  "scope": "Read-only independent math replay and file integrity. No Jensen/FLORIS AEP evaluation or NSGA-II optimisation was performed. Clean environment replay unverified."
+}

@@ -1,0 +1,7 @@
+# Direct Python package versions recorded by final Metric 1c run_settings.json.
+# Python 3.11.15 on Windows-10-10.0.22621-SP0.
+# This is a reconstructed direct dependency list, not an original conda/venv export.
+numpy==2.4.6
+pandas==3.0.3
+matplotlib==3.11.0
+pymoo==0.6.1.5

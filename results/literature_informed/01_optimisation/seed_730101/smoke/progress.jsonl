@@ -1,0 +1,2 @@
+{"generation": 1, "n_evaluations": 8, "feasible_count": 8, "min_normalised_aep_loss": 0.29799680601174133, "min_normalised_risk": 0.7061700920964834, "normalised_hypervolume": 2.126677669684213, "hypervolume_reference": [2.0, 2.0], "elapsed_s": 12.967}
+{"generation": 2, "n_evaluations": 16, "feasible_count": 8, "min_normalised_aep_loss": 0.29799680601174133, "min_normalised_risk": 0.7061700920964834, "normalised_hypervolume": 2.1290148965783358, "hypervolume_reference": [2.0, 2.0], "elapsed_s": 25.93}

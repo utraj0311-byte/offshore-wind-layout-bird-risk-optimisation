@@ -1,0 +1,10 @@
+# Versions explicitly recorded in the frozen run_settings.json:
+# Python 3.11.13 (set up Python separately; pip does not install Python).
+numpy==2.0.2
+floris==4.6.5
+pymoo==0.6.1.5
+# Required by original modules/post-processing, versions not pinned in run_settings:
+PyYAML
+scipy
+pandas
+matplotlib

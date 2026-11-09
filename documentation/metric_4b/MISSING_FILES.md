@@ -1,0 +1,19 @@
+# Missing, unverified and intentionally omitted files
+
+| Item | Status | Impact / resolution without fabricating science |
+|---|---|---|
+| **Original 12-sector Model 9 v4 source bytes** | **Missing / not recoverable from supplied archives**; current available original source tree is v7 | Historical 12-sector result settings identify v4. The 5° archive hashes the supplied v7 files, but original v4 historical exact source parity cannot be asserted. |
+| **`metric_4b_72sectors_postrun/geometry_report.json`** | **Missing** | Original 72-sector independent-evaluation runner verifies its geometry against this report. Confirmation settings record the widened geometry, but that is not the same original report; do not reconstruct it. |
+| **`metric_4b_72sectors_postrun/endpoint_1degree_aep.json`** | **Missing** | The original evaluator requires its 1° endpoint quality-gate record. `metric4b_postrun_checks.py` is available, but its original output report was not supplied; historical textual statements of passage cannot replace the file. |
+| **Historical 150 m hub-height sensitivity completed ZIP** (`model9_hub_height_sensitivity_seed90142.zip`) | **Missing** | Only source, manifest, intended design, and unit tests are archived. Do not claim to reproduce its final statistics or equate it with the final confirmation's 150 m control. |
+| **Historical northern-gannet precision-validation raw results** (`model9_precision_validation_northern_gannet/`) | **Missing** | `PRECISION_IMPROVEMENT.md` gives recorded batch comparisons and the test code is preserved, but raw independent batch outputs are unavailable. |
+| **Original historical 12-sector optimisation v4 checkpoint object** | Not part of provided historical archive | Cannot resume historical optimisation exactly; final historical CSV and Pareto vectors are available. |
+| **Final 72-sector `checkpoint_latest.pkl` and `checkpoint_previous.pkl`** | **Available in original 72-sector ZIP, deliberately excluded from this GitHub add-on** | No checkpoint-exact resume from the public GitHub package; saved final population, selected Pareto and audit files remain. Archive original ZIP offline. |
+| **Intermediate independent-evaluation CSV checkpoints** | **Available, excluded as completed duplicate temporary outputs** | Final `independent_evaluation_batches.csv` and `independent_evaluation_10000_subsamples.csv` preserve full completed independent observations; no missing result from exclusion. |
+| **1° full-front wind-sector optimisation** | **No recorded run; not an implemented final experiment** | 1° endpoint AEP *re-evaluation* is not a 1° re-optimisation. |
+| **Original FLORIS turbine binary environment / exact stochLAB upstream release** | Full environment snapshot and stochLAB release/commit **unavailable** | YAML reference, FHD source bytes, hashes and recorded pip versions are present; exact full software environment remains outside archive. |
+| **Exact source of AEP scaling constant's five calibration layouts** | Not established by these files | The normalisation constant 137.96914764866568 is recorded unchanged. Do not claim five layouts originated in 12-sector preliminary optimisations without their source records. |
+
+### Scientific reproducibility verdict
+
+**Strong archive-level reproducibility:** complete source/hash-backed 5° optimisation code + input, fixed FHD, original initial population, all resulting Pareto coordinates/objectives, and full final independent evaluation tables. **Not independently re-executed in this packaging:** trajectories, tests, FLORIS, NSGA-II, or plotting. **Not one-command complete:** missing post-run audit reports, absent historical v4 source and environment freeze, and original hard-coded working-directory assumptions. No missing scientific source modules were replaced by handwritten substitutes.

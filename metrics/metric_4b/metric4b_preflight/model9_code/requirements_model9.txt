@@ -1,0 +1,7 @@
+numpy>=1.24,<3
+pandas>=2,<4
+matplotlib>=3.7,<4
+scipy>=1.10,<2
+pymoo==0.6.1.5
+floris==4.6.5
+PyYAML>=6,<7

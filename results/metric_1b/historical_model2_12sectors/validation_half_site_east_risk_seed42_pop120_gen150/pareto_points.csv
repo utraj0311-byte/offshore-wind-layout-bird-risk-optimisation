@@ -1,0 +1,3 @@
+layout_id,aep_gwh,risk,f1_normalised_minimise,f2_normalised_risk,min_spacing_m,spacing_violations,boundary_violations,high_risk_count,high_risk_fraction
+0,754.638634186932,0.0,-0.0006305969582796056,0.0,1005.5096799999094,0,0,0,0.0
+1,759.9926183981811,4000.0,-0.014824602066694448,0.3333333333333333,1118.4214162599626,0,0,4,0.3333333333333333

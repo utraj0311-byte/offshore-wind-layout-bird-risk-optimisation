@@ -1,0 +1,23 @@
+{
+  "energy_endpoint": {
+    "candidate_id": "pareto_032",
+    "layout_csv": "C:\\Users\\Deepak\\Desktop\\bird_layout_opt\\Model_9_Code_v4\\model9_code\\results\\model9_nsga2_full_seed142\\anchor_layouts\\energy_endpoint_pareto_032.csv",
+    "aep_gwh": 849.4235542769413,
+    "aep_loss_gwh": 5.072104284777311,
+    "fresh_E_RT_CE": 0.0009056436629537907
+  },
+  "balanced_reference": {
+    "candidate_id": "pareto_032",
+    "layout_csv": "C:\\Users\\Deepak\\Desktop\\bird_layout_opt\\Model_9_Code_v4\\model9_code\\results\\model9_nsga2_full_seed142\\anchor_layouts\\balanced_reference_pareto_032.csv",
+    "aep_gwh": 849.4235542769413,
+    "aep_loss_gwh": 5.072104284777311,
+    "fresh_E_RT_CE": 0.0009056436629537907
+  },
+  "rotor_transit_endpoint": {
+    "candidate_id": "pareto_032",
+    "layout_csv": "C:\\Users\\Deepak\\Desktop\\bird_layout_opt\\Model_9_Code_v4\\model9_code\\results\\model9_nsga2_full_seed142\\anchor_layouts\\rotor_transit_endpoint_pareto_032.csv",
+    "aep_gwh": 849.4235542769413,
+    "aep_loss_gwh": 5.072104284777311,
+    "fresh_E_RT_CE": 0.0009056436629537907
+  }
+}

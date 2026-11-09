@@ -1,0 +1,6 @@
+# From final run_settings.json (2026-10-16/17); not a pip-freeze or a historical environment proof.
+ # Recorded on Windows-10-10.0.22621-SP0, Python 3.11.15.
+ numpy==2.4.6
+ pandas==3.0.3
+ matplotlib==3.11.0
+ pymoo==0.6.1.5

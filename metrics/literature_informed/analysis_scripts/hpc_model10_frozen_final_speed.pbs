@@ -1,0 +1,13 @@
+#!/bin/bash
+#PBS -N m10fs_spd
+#PBS -q fpt-small
+#PBS -l nodes=1:ppn=1
+#PBS -l walltime=48:00:00
+#PBS -j oe
+set -euo pipefail
+cd /home/uraj/model10
+source /home/uraj/miniconda3/etc/profile.d/conda.sh
+conda activate model10
+export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1
+python -u model10_final_frozen_sensitivity.py --dimension speed --check-inputs
+python -u model10_final_frozen_sensitivity.py --dimension speed --run

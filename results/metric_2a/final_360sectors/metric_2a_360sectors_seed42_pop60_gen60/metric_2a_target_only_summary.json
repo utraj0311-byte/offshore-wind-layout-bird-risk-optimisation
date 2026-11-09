@@ -1,0 +1,15 @@
+{
+  "method": "regular feasible 60m spatial grid; no optimisation",
+  "other_11_turbines_frozen_from": "new highest-AEP Pareto layout",
+  "candidate_grid_points": 10202,
+  "feasible_target_positions": 4683,
+  "best_sampled_target_xy_m": [
+    0.0,
+    0.0
+  ],
+  "best_sampled_Q_2a": 0.03273895026994119,
+  "best_sampled_normalised_f2": 0.00297626820635829,
+  "jointly_optimised_lowest_Q_2a": 0.00022308261818229086,
+  "target_only_minus_joint_Q": 0.0325158676517589,
+  "warning": "grid-sampled minimum, not a proven continuous optimum"
+}

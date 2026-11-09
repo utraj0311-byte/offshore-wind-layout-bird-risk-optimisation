@@ -1,0 +1,18 @@
+#!/bin/bash
+#PBS -N m10_guardedcf
+#PBS -q fpt-small
+#PBS -l nodes=1:ppn=1
+#PBS -l walltime=24:00:00
+#PBS -j oe
+set -euo pipefail
+cd /home/uraj/model10
+source /home/uraj/miniconda3/etc/profile.d/conda.sh
+conda activate model10
+export OPENBLAS_NUM_THREADS=1
+export OMP_NUM_THREADS=1
+export MKL_NUM_THREADS=1
+export NUMEXPR_NUM_THREADS=1
+echo "=== Guarded final Model 10 confirmation $(date) ==="
+python -u model10_confirm_final_selected_with_guards.py --check-inputs
+python -u model10_confirm_final_selected_with_guards.py --run
+echo "=== COMPLETE $(date) ==="

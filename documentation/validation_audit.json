@@ -1,0 +1,74 @@
+{
+  "source": "Current chat original source files and saved archives",
+  "no_optimisation_launched": true,
+  "checks": {
+    "2a": {
+      "n_layouts": 19,
+      "coordinates_rows": 228,
+      "min_spacing_m": 1054.529646185587,
+      "max_abs_aep_difference_gwh": 0,
+      "max_abs_Q_difference": 9.80118763926896e-17,
+      "max_abs_coordinate_difference_m": 9.094947017729282e-13,
+      "hypervolume_generations": 60,
+      "endpoint_0p5deg_checks_pass": true,
+      "highest_AEP_gwh": 732.3408342393886,
+      "lowest_Q": 0.0002230826181822,
+      "all_non_dominated": true
+    },
+    "2b": {
+      "n_layouts": 20,
+      "coordinates_rows": 240,
+      "min_spacing_m": 966.8177246448274,
+      "max_abs_aep_difference_gwh": 0,
+      "max_abs_Q_difference": 3.552713678800501e-15,
+      "max_abs_coordinate_difference_m": 9.094947017729282e-13,
+      "hypervolume_generations": 100,
+      "endpoint_0p5deg_checks_pass": true,
+      "highest_AEP_gwh": 734.176774474805,
+      "lowest_Q": 10.064129238508572,
+      "all_non_dominated": true
+    },
+    "aep_reference": {
+      "aep_1deg_gwh": 734.2243210189986,
+      "expected_aep_1deg_gwh": 734.224321018999,
+      "endpoint_check_pass": true
+    }
+  },
+  "required_missing_original_modules": [
+    {
+      "name": "aep_only_problem.py",
+      "target": "shared/jensen_metric2_original/aep_only_problem.py",
+      "archived_sha256": "217e1bdb1729ad940d9bd9ebfec68f00bbe0bc6d4bcec5c50ada9c9876e228e6"
+    },
+    {
+      "name": "risk_only_problem.py",
+      "target": "shared/jensen_metric2_original/risk_only_problem.py",
+      "archived_sha256": "169078731a621d93805974e90b03d12e23b476c6f9b2e1622096fd9e4b79df53"
+    }
+  ],
+  "runner_sha256": "4c0923ff9431670870078344d3e29d9605cad380b774d20e57df4ba245b1c0dc",
+  "original_config_sha256": "df56f80c33f8912eb44ef6380451d762ba71aabcd0aa002186bf506618fb074e",
+  "metric1d_config_recorded_sha256": "f4348525c07e0e4d02ac8589a97bc6d764a951ff3122fea7a46275c28c6215f6",
+  "reused_existing_repository_modules": [
+    {
+      "path": "shared/wake.py",
+      "sha256": "122f6f86863cb85bfe4da21d4e5433ea7d0b28dc892356cd12da47ed73c070d8",
+      "match": "verified"
+    },
+    {
+      "path": "shared/run_validation.py",
+      "sha256": "e86b0cea38e8900aa82db092ffd5011ab5f95c76934cb2c830786e76c51cd981",
+      "match": "verified"
+    },
+    {
+      "path": "shared/validation_problem.py",
+      "sha256": "4f80ef448b32456116c24abea9bbb8b692e69e76634660c27ab6ef51866e6817",
+      "match": "verified"
+    },
+    {
+      "path": "shared/hypothetical_risk.py",
+      "sha256": "c49b0d07720c72996dbee08e19b8cff3fac88c29a22f28df7c326dc9c3df6d90",
+      "match": "verified"
+    }
+  ]
+}

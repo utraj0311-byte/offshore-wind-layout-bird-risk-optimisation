@@ -1,0 +1,243 @@
+{
+  "run_status": "complete",
+  "metric": "2b",
+  "previous_model": "Model 6",
+  "site": {
+    "width_m": 6000.0,
+    "height_m": 6000.0,
+    "n_turbines": 12,
+    "min_spacing_D": 4.0,
+    "minimum_spacing_m": 960.0
+  },
+  "turbine": {
+    "D_m": 240.0,
+    "hub_m": 150.0,
+    "rated_MW": 15.0,
+    "cut_in_ms": 3.0,
+    "rated_ms": 10.6,
+    "cut_out_ms": 25.0
+  },
+  "wind": {
+    "n_sectors": 360,
+    "sector_width_deg": 1.0,
+    "wind_from_deg": 225.0,
+    "speed_bins_ms": [
+      4.0,
+      6.0,
+      8.0,
+      10.0,
+      12.0,
+      14.0,
+      16.0
+    ],
+    "weibull_k": 2.0,
+    "weibull_A_ms": 10.0,
+    "direction_weights": "exp(2 cos(delta FROM 225 degrees)), normalised",
+    "speed_weights": "discrete Weibull PDF, normalised"
+  },
+  "wake": {
+    "model": "Jensen top-hat hub-centre test",
+    "kw": 0.04,
+    "combination": "root-sum-square, deficit clipped to .95",
+    "CT": "0.8 for 3<=U<10.6, .25 for 10.6<=U<=25, else 0 (undisturbed U)",
+    "power_curve": "cubic 3 to 10.6 m/s, then 15 MW through 25 m/s"
+  },
+  "metric_formulation": {
+    "permutation_invariant": true,
+    "sigma_D": 8.0,
+    "sigma_m": 1920.0,
+    "Q": "sum_{i < j} exp(-d_ij^2/(2 sigma^2))",
+    "risk_multiplier": 1.0,
+    "number_of_unique_pairs": 66
+  },
+  "objective_scaling": {
+    "aep_ref_gwh": 760.663033300808,
+    "aep_min_gwh": 380.331516650404,
+    "aep_max_gwh": 760.663033300808,
+    "f1": "2 - 2*AEP/AEP_ref",
+    "f2": "Q_2b/66",
+    "archived_1a_to_1d_aep_ref_gwh": 754.4007727706155,
+    "note": "Do not replace Metric 2a/2b AEP_ref with Metric 1a-1d AEP_ref."
+  },
+  "optimizer": {
+    "name": "NSGA-II",
+    "population": 80,
+    "generations": 100,
+    "seed": 42,
+    "eliminate_duplicates": true,
+    "sampling": "original GridSampling(model_name=constant), 50/50 random/grid",
+    "operators": {
+      "crossover": {
+        "class": "pymoo.operators.crossover.sbx.SBX",
+        "prob": {
+          "wrapper": "Real",
+          "value": 0.9
+        },
+        "prob_var": {
+          "wrapper": "Real",
+          "value": 0.5
+        },
+        "eta": {
+          "wrapper": "Real",
+          "value": 15
+        },
+        "n_offsprings": 2,
+        "n_parents": 2,
+        "repair": null
+      },
+      "mutation": {
+        "class": "pymoo.operators.mutation.pm.PM",
+        "prob": {
+          "wrapper": "Real",
+          "value": 0.9
+        },
+        "prob_var": null,
+        "eta": {
+          "wrapper": "Real",
+          "value": 20
+        },
+        "repair": null
+      },
+      "selection": {
+        "class": "pymoo.operators.selection.tournament.TournamentSelection",
+        "repair": null
+      },
+      "survival": {
+        "class": "pymoo.operators.survival.rank_and_crowding.classes.RankAndCrowding"
+      }
+    },
+    "hv_reference": [
+      1.2,
+      1.2
+    ]
+  },
+  "versions": {
+    "python": "3.11.15",
+    "pymoo": "0.6.1.5",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "matplotlib": "3.11.0",
+    "platform": "Windows-10-10.0.22621-SP0"
+  },
+  "source_files_sha256": {
+    "config.py": {
+      "exists": true,
+      "sha256": "df56f80c33f8912eb44ef6380451d762ba71aabcd0aa002186bf506618fb074e"
+    },
+    "wake.py": {
+      "exists": true,
+      "sha256": "122f6f86863cb85bfe4da21d4e5433ea7d0b28dc892356cd12da47ed73c070d8"
+    },
+    "validation_problem.py": {
+      "exists": true,
+      "sha256": "4f80ef448b32456116c24abea9bbb8b692e69e76634660c27ab6ef51866e6817"
+    },
+    "run_validation.py": {
+      "exists": true,
+      "sha256": "e86b0cea38e8900aa82db092ffd5011ab5f95c76934cb2c830786e76c51cd981"
+    },
+    "coupled_risk.py": {
+      "exists": true,
+      "sha256": "57df6141578eff7bebfad8dfcb2fd2335be4a296643e0b6f8a26f0ea15364dc1"
+    },
+    "pairwise_risk.py": {
+      "exists": true,
+      "sha256": "8370fade49fb039b1dd22bb5253138711f9fe54bdc4f044d1cca676493c6c88d"
+    },
+    "run_aep_only.py": {
+      "exists": true,
+      "sha256": "907be02c1af8e48f3b259d485ec6cf92f4ca29348e37b4baa812eb39a27fe415"
+    },
+    "aep_only_problem.py": {
+      "exists": true,
+      "sha256": "217e1bdb1729ad940d9bd9ebfec68f00bbe0bc6d4bcec5c50ada9c9876e228e6"
+    },
+    "risk_only_problem.py": {
+      "exists": true,
+      "sha256": "169078731a621d93805974e90b03d12e23b476c6f9b2e1622096fd9e4b79df53"
+    },
+    "hypothetical_risk.py": {
+      "exists": true,
+      "sha256": "c49b0d07720c72996dbee08e19b8cff3fac88c29a22f28df7c326dc9c3df6d90"
+    }
+  },
+  "source_archives_sha256": {
+    "aep_only_layout_original.csv": "00edfb37490caedec244e3c62c1f21dd897468357127d1854deca4b6090adcf5",
+    "model5_original.zip": "1890412b40040a88c9aa33e1f1e48f590dbee6bf589f13e9fb64d20d1ed51fc7",
+    "model6_original.zip": "91a3420c1064022431b666927845a1f3fd469de33b4aade33cd37f143ce48647",
+    "risk_only_layout_original.csv": "ae2586bd6104ba8a81281aa4de4e9cf6376b18a004cc468bb91dc64c05d98e75"
+  },
+  "runner_sha256": "4c0923ff9431670870078344d3e29d9605cad380b774d20e57df4ba245b1c0dc",
+  "preflight": {
+    "status": "PASS",
+    "all_6_saved_12sector_AEP_verified": true,
+    "only_approved_scientific_change": {
+      "wind.n_sectors": [
+        12,
+        360
+      ]
+    },
+    "local_eval_seconds": 0.1800709000090137
+  },
+  "reporting_aep": {
+    "status": "complete",
+    "n_sectors": 360,
+    "max_abs_delta_pct_vs_optimisation": 0.0
+  },
+  "post_run_endpoint_verification": {
+    "status": "pass",
+    "n_sectors": 720,
+    "results": [
+      {
+        "anchor": "energy_optimal",
+        "layout_id": 4,
+        "aep_optimisation_1deg_gwh": 734.176774474805,
+        "aep_reported_1deg_gwh": 734.176774474805,
+        "aep_check_0p5deg_gwh": 733.7445734418518,
+        "delta_reported_minus_optimisation_gwh": 0.0,
+        "abs_delta_1deg_vs_0p5deg_gwh": 0.4322010329532304,
+        "abs_delta_pct_of_0p5deg": 0.058903472488506484,
+        "threshold_pct_strict": 0.2,
+        "convergence_pass": true
+      },
+      {
+        "anchor": "collision_optimal",
+        "layout_id": 11,
+        "aep_optimisation_1deg_gwh": 732.0543115527422,
+        "aep_reported_1deg_gwh": 732.0543115527422,
+        "aep_check_0p5deg_gwh": 732.0216331086002,
+        "delta_reported_minus_optimisation_gwh": 0.0,
+        "abs_delta_1deg_vs_0p5deg_gwh": 0.03267844414199317,
+        "abs_delta_pct_of_0p5deg": 0.004464136394879618,
+        "threshold_pct_strict": 0.2,
+        "convergence_pass": true
+      }
+    ]
+  },
+  "output_policy": "new directory only, no overwrite of existing folders",
+  "start_time_utc": "2026-10-16T19:34:48.514548+00:00",
+  "non_dominated_layouts_saved": 20,
+  "risk_only_reference": {
+    "risk_Q": 9.841423058981627,
+    "aep_12sector_gwh": 715.8902193948853,
+    "aep_1deg_gwh": 731.9073914679589,
+    "aep_0p5deg_gwh": 732.0253824800425,
+    "aep_difference_gwh": 0.11799101208362117,
+    "difference_pct_of_0p5deg": 0.016118431806814843
+  },
+  "original_aep_only_reference": {
+    "risk_Q": 17.315582665379402,
+    "aep_12sector_gwh": 760.1759509556219,
+    "aep_1deg_gwh": 724.8275250420667,
+    "aep_0p5deg_gwh": 724.6621647933534,
+    "aep_difference_gwh": 0.16536024871322752,
+    "difference_pct_of_0p5deg": 0.0228189433293212
+  },
+  "endpoint_loss_gwh": 2.122462922062823,
+  "endpoint_loss_percent": 0.2890942611990323,
+  "aligned_pairs_counts": {
+    "energy_optimal": 0,
+    "collision_optimal": 0
+  },
+  "finish_time_utc": "2026-10-16T19:58:56.349231+00:00"
+}

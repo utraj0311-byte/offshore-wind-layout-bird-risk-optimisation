@@ -1,0 +1,24 @@
+{
+  "independent_scientific_change": {
+    "n_sectors": [
+      12,
+      72
+    ]
+  },
+  "derived_changes": {
+    "wind_conditions": [
+      84,
+      504
+    ],
+    "wind_directions_deg": "regenerated 5-degree spacing",
+    "condition_frequencies": "recomputed from same weighting formula"
+  },
+  "other_scientific_differences": [],
+  "operational_additions": [
+    "full resumable checkpoint",
+    "file hashes",
+    "full final population",
+    "diagnostic hypervolume"
+  ],
+  "source_provenance_limitation": "Uploaded v7 source; original was v4"
+}

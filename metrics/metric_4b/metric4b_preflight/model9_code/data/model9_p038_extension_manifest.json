@@ -1,0 +1,85 @@
+{
+  "extension_design_version": "Model 9 p038 endpoint confirmation extension v1",
+  "purpose": "Test whether the widest fresh-front contrast, pareto_038 versus pareto_032, represents a reproducible AEP-versus-rotor-transit trade-off.",
+  "analysis_provenance": {
+    "original_v5_primary_test": false,
+    "analysis_plan_frozen_before_p038_simulation": true,
+    "candidate_selection_stage": "pareto_038 was selected after the five-batch fresh validation of the full NSGA-II run and before any seed-30142 p038 result existed.",
+    "interpretation": "This is a transparent independent confirmation extension, not the original pre-specified p037 primary test."
+  },
+  "source_full_run": {
+    "archive_name": "model9_nsga2_full_seed142.zip",
+    "archive_sha256": "1100f6d490e2e03a8adeb2ed0955a552a2f5e0db57f321b4ac0f193c21dc2842",
+    "pareto_decision_vector_row": 38,
+    "candidate_id": "pareto_038",
+    "aep_gwh": 828.8107152929313,
+    "training_E_RT_CE": 0.0007002246984765,
+    "fresh_E_RT_CE": 0.0008828355342188,
+    "selection_reason": "lowest mean fresh E_RT_CE among the 51 training-Pareto layouts"
+  },
+  "prior_confirmation": {
+    "archive_path": "data/model9_endpoint_confirmation_seed30142.zip",
+    "archive_sha256": "04446dcf839bc76b0b76e9ff4d07ec18a1f9638da5c4778ad1e9ed9bb946653e",
+    "required_candidate_ids": [
+      "original_energy_layout",
+      "pareto_032",
+      "pareto_037"
+    ],
+    "required_primary_status": "risk_difference_inconclusive",
+    "batch_count": 15,
+    "trajectories_per_batch": 100000,
+    "trajectory_seeds": [
+      30142,
+      30143,
+      30144,
+      30145,
+      30146,
+      30147,
+      30148,
+      30149,
+      30150,
+      30151,
+      30152,
+      30153,
+      30154,
+      30155,
+      30156
+    ],
+    "flight_height_seeds": [
+      40142,
+      40143,
+      40144,
+      40145,
+      40146,
+      40147,
+      40148,
+      40149,
+      40150,
+      40151,
+      40152,
+      40153,
+      40154,
+      40155,
+      40156
+    ],
+    "required_numpy_version": "2.4.6",
+    "required_fhd_sha256": "adc9ea903db9c8e34bfe5b88c382381b737c2e676d79af437f66d198208a0f2c",
+    "required_floris_config_sha256": "f6b788df9e38f006dfb6c68ddfb80ab090dad9cd555982a8d5c5e4b0c2f2d364",
+    "pareto_032_aep_gwh": 849.4227121750812,
+    "expected_p032_E_RT_CE": 0.0008808596930787463
+  },
+  "pareto_038": {
+    "layout_csv": "data/confirmation_pareto_038.csv",
+    "layout_sha256": "e5b18cc530ee1ac44a76fffac132714021247d692a8297a4e880cec9bc812d7d",
+    "expected_aep_gwh": 828.8107152929313
+  },
+  "extension_test": {
+    "first_candidate": "pareto_038",
+    "second_candidate": "pareto_032",
+    "paired_difference": "E_RT_CE(pareto_038) - E_RT_CE(pareto_032)",
+    "confidence_level": 0.95,
+    "method": "two-sided paired Student-t interval across the 15 matched batches",
+    "tradeoff_gate": "pass only when the interval upper bound is below zero and pareto_038 AEP is lower than pareto_032 AEP"
+  },
+  "interpretation_boundary": "Rotor transit is an exposure endpoint, not blade collision, fatality, or mortality."
+}

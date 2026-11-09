@@ -1,0 +1,14 @@
+#!/bin/bash
+#PBS -N m10_final_plots
+#PBS -q fpt-small
+#PBS -l nodes=1:ppn=1
+#PBS -l walltime=01:00:00
+#PBS -j oe
+set -euo pipefail
+cd /home/uraj/model10/MODEL10_FINAL_72SECTOR_MASTER
+source /home/uraj/miniconda3/etc/profile.d/conda.sh
+conda activate model10
+export MPLBACKEND=Agg
+export OPENBLAS_NUM_THREADS=1
+python 07_scientific_code_and_job_scripts/model10_plot_master.py --master .
+echo 'MODEL 10 HPC PLOTS COMPLETE'

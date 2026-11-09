@@ -1,0 +1,93 @@
+{
+  "status": "approved_template; authoritative settings are saved at launch",
+  "approved_date": "2026-10-16 (revised to 1 degree)",
+  "metric": "1d",
+  "model_name": "point_hotspot",
+  "energy_model": "Jensen original uploaded wake.py",
+  "wind": {
+    "n_sectors": 360,
+    "step_deg": 1.0,
+    "wind_from_deg": 225.0,
+    "speed_bins_ms": [
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16
+    ],
+    "weibull_k": 2.0,
+    "weibull_A_ms": 10.0,
+    "direction_weights": "exp(2*cos(theta_deg-225deg)), normalized"
+  },
+  "turbine": {
+    "rotor_diameter_m": 240,
+    "rated_power_mw": 15,
+    "hub_height_m": 150,
+    "cut_in_ms": 3,
+    "rated_ms": 10.6,
+    "cut_out_ms": 25
+  },
+  "site": {
+    "n_turbines": 12,
+    "width_m": 6000,
+    "height_m": 6000,
+    "min_spacing_D": 4,
+    "min_spacing_m": 960
+  },
+  "jensen": {
+    "wake_expansion_k": 0.04,
+    "overlap": "top-hat hub-centre",
+    "deficits": "root-sum-square clipped 0.95",
+    "CT": "0 if U<3 or U>25; 0.8 if 3<=U<10.6; 0.25 if 10.6<=U<=25; U is undisturbed incoming speed"
+  },
+  "objectives": {
+    "AEP_ref_gwh": 754.4007727706155,
+    "aep_ref_provenance": "recovered from archived objectives; reference layout/calculation not known",
+    "f1_minimize": "2-2*AEP/AEP_ref",
+    "f2_minimize": "Q/12000",
+    "field_high": 1000,
+    "field_low": 0,
+    "corridor_width_m": 3000,
+    "gaussian_sigma_m": 2000,
+    "risk_multiplier": 1
+  },
+  "nsga2": {
+    "version_required": "0.6.1.5",
+    "historical_version": "not archived",
+    "population": 120,
+    "generations": 150,
+    "seed": 42,
+    "duplicate_elimination": true,
+    "sampling": "original GridSampling from run_validation.py",
+    "1c_seed_sampler_corridor_width_m": 1200,
+    "1d_seed_sampler_exclusion_radius_m": 900,
+    "operators": "keep unmodified defaults from installed 0.6.1.5"
+  },
+  "postrun": {
+    "endpoint_check_n_sectors": 720,
+    "endpoint_check_degrees": 0.5,
+    "recheck_anchors": [
+      "energy_optimal",
+      "collision_optimal"
+    ],
+    "threshold_pct_strict": 0.2,
+    "save_full_pareto_coordinates": true,
+    "expected_files": [
+      "run_settings.json",
+      "pareto_full.npz",
+      "pareto_layouts_long.csv",
+      "pareto_points.csv",
+      "pareto_aep_reported_1deg.csv",
+      "endpoint_0p5deg_convergence.csv",
+      "metric_1d_pareto.png",
+      "metric_1d_pareto.pdf"
+    ],
+    "final_aep_reporting_resolution_deg": 1.0,
+    "save_difference_from_optimisation_resolution": true,
+    "hard_stop_on_convergence_failure": true,
+    "older_1a_2deg_archive": "retained separately as diagnostic; not input to new optimisations"
+  },
+  "floris_unmodified_sectors": 72
+}

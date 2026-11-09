@@ -1,0 +1,17 @@
+{
+  "changed_independent_scientific_input": {
+    "n_sectors": [
+      12,
+      72
+    ]
+  },
+  "derived_input_grid": {
+    "number_of_combined_conditions": [
+      84,
+      504
+    ]
+  },
+  "other_scientific_differences": [],
+  "reporting_and_checkpoint_metadata_added": true,
+  "previous_pymoo_version_recorded": false
+}

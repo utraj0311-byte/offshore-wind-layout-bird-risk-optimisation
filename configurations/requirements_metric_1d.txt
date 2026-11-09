@@ -1,0 +1,6 @@
+# Versions recorded by final Metric 1d run_settings.json, Windows, Python 3.11.15
+# Reconstructed direct package references, NOT an original transitive conda/pip lock.
+numpy==2.4.6
+pandas==3.0.3
+matplotlib==3.11.0
+pymoo==0.6.1.5

@@ -1,0 +1,45 @@
+{
+  "status": "PASSED",
+  "created_utc": "2026-10-21T09:41:52.867169+00:00",
+  "source_hpc_root": "/home/uraj/model10",
+  "n_files_in_manifest": 236,
+  "counts_and_selection": {
+    "n_total_evaluations": 1440,
+    "n_feasible": 513,
+    "n_non_dominated": 24,
+    "selected": [
+      {
+        "selection": "highest_aep",
+        "seed": 730101,
+        "evaluation_index": 455,
+        "aep_gwh": 823.0822640294288,
+        "optimisation_sample_Q_lit": 8.5322223718665e-05,
+        "d": 0.0,
+        "aep_delta_pct_of_highest": 0.0,
+        "risk_delta_pct_of_highest": 0.0
+      },
+      {
+        "selection": "knee",
+        "seed": 730103,
+        "evaluation_index": 418,
+        "aep_gwh": 821.3442419232357,
+        "optimisation_sample_Q_lit": 6.124694896392856e-05,
+        "d": 0.22549105121182794,
+        "aep_delta_pct_of_highest": -0.21116019408370038,
+        "risk_delta_pct_of_highest": -28.216886182104705
+      },
+      {
+        "selection": "lowest_risk",
+        "seed": 730103,
+        "evaluation_index": 220,
+        "aep_gwh": 807.5716007926734,
+        "optimisation_sample_Q_lit": 2.9456101769728496e-05,
+        "d": 0.0,
+        "aep_delta_pct_of_highest": -1.8844608752498633,
+        "risk_delta_pct_of_highest": -65.47663611434366
+      }
+    ]
+  },
+  "policy": "copy only; never move/delete or edit original results",
+  "provenance": "manifest lists original source and SHA-256 of archived bytes"
+}

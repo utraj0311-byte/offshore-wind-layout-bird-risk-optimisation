@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "model8_sha256": "2d9985f6c165a83fac5ed1493cefa1a65e8082a39d17e80e3776be12257e823d",
+  "model9_sha256": "3c821d5f62de8b292bc00190ae71ae1379be64ad4cd11c67dc631186b5650f09",
+  "band_sha256": "2c095e33563323fb60a8e7d70cb3ab7b5a9672adbf0df98da32d006fa7ed96e0",
+  "floris_config_sha256": "f6b788df9e38f006dfb6c68ddfb80ab090dad9cd555982a8d5c5e4b0c2f2d364",
+  "population_seed": 142,
+  "flight_height_seed": 10142,
+  "n_turbines": 12,
+  "n_birds": 512,
+  "aep_without_band_gwh": 847.555657223372,
+  "aep_with_band_gwh": 847.555657223372,
+  "original_E_RT_CE": 0.0008443965828814428,
+  "with_band_E_RT_CE": 0.0008443965828814428,
+  "sampled_rotor_transits": 3,
+  "total_expected_potential_strikes": 0.014935937058346442,
+  "E_potential_strike_per_entrant": 2.9171752067082895e-05,
+  "accepted_bird_turbine_pairs": 37,
+  "sum_per_turbine_strikes": 0.014935937058346442,
+  "f0": 0.05030111047738832,
+  "f1": 1.0,
+  "maximum_spacing_constraint": -18.27405912165455,
+  "controlled_crossings": {
+    "one_positive_transit_probability": 0.04729243528174466,
+    "zero_disk_transit_probability": 0.0,
+    "downstream_distinct_transits": 3,
+    "downstream_accepted_bird_turbine_pairs": 3,
+    "downstream_callback_notifications": 6,
+    "downstream_sum_of_accepted_strikes": 0.17317110181239043
+  }
+}

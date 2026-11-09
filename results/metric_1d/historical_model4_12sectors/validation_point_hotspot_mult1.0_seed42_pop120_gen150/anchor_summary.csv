@@ -1,0 +1,4 @@
+anchor,layout_id,aep_gwh,risk,min_spacing_m,spacing_violations,boundary_violations,high_risk_count,high_risk_fraction
+energy_optimal,5,754.551441219127,3522.5548376509664,1147.045985634989,0,0,0,0.0
+collision_optimal,23,713.8733015256179,2266.166689581738,964.2328452413419,0,0,0,0.0
+knee,40,744.2158290435044,2653.827304849553,985.4789100786378,0,0,0,0.0

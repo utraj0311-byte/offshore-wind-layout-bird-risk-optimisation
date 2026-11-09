@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "exact_archived_snapshot": true,
+  "archived_scalar_and_all_other_array_checks": "exact match",
+  "stored_path_coordinate_tolerance_m": 1e-08,
+  "archived_stored_path_numeric_comparison": {
+    "bird_0_maximum_coordinate_difference_m": 0.0,
+    "bird_13_maximum_coordinate_difference_m": 0.0
+  },
+  "existing_band_checks": "PASS",
+  "existing_fixed_rotor_incidence_checks": "PASS",
+  "band_downwind_fixture_probability": 0.06196422529849636,
+  "band_upwind_fixture_probability": 0.07586416449942328,
+  "conditional_disc_exposure_fixture": 0.0021037404351958704,
+  "band_weighted_fixture_contribution": 6.430471262622749e-05,
+  "unit_strike_matrix_max_error": 9.853229343548264e-16,
+  "downstream_two_bird_fixture_contribution": 0.6730686824373227,
+  "original_snapshot_sha256": "a220899f04018857f195c5382b243b8413dcaab6e5c61cd83771499b32844400",
+  "reference_path_fixture_sha256": "ab31299acfa1919fda8c78897a03dae6c1f459e628f760acdc04b02a3fd68c6d",
+  "portable_regression_snapshot_sha256": "a220899f04018857f195c5382b243b8413dcaab6e5c61cd83771499b32844400"
+}

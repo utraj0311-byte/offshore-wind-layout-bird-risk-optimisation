@@ -1,0 +1,170 @@
+{
+  "purpose": "Predeclared paired fresh-bird confirmation plus p=0 no-response control",
+  "training_source": "hpc_full_run_v3_72sectors",
+  "layouts": {
+    "reference": {
+      "source": "frozen energy reference",
+      "aep5": 804.3901377275079,
+      "training_q": 3.20618950134584e-05,
+      "coordinates_sha256": "3fe119a9bef78282408aab1c224853090c5b88a7299461c14aa03ec4cc4d59ba"
+    },
+    "highest_aep": {
+      "source": "v3 72-sector training front eval 455",
+      "aep5": 823.0822640294288,
+      "training_q": 8.5322223718665e-05,
+      "coordinates_sha256": "8b9a62987f6e62610c824b449a0393e106c55af0b7fb6348698794f02a14d3c5"
+    },
+    "balanced": {
+      "source": "v3 72-sector training front eval 465",
+      "aep5": 818.2706921340746,
+      "training_q": 5.791632699593647e-05,
+      "coordinates_sha256": "f748b095406ed1cf87ea29afb660b1e131220f0b8485cdc5113343389f3d9347"
+    },
+    "combined_lowest_risk": {
+      "source": "old seed730102 front_26_eval_457; AEP recomputed 5deg",
+      "aep5": 808.4128040020914,
+      "training_q": 2.843169437859612e-05,
+      "coordinates_sha256": "182c4b3eaa8ccbb52cbed80c4bfc246973e6850834e0f9918c6ebe40d8291757"
+    },
+    "new_lowest_risk": {
+      "source": "v3 72-sector training front eval 416",
+      "aep5": 806.1044085201129,
+      "training_q": 2.9680550769826424e-05,
+      "coordinates_sha256": "f0250e85593290c2c9f0c939779f116acb30a1a311084bb431f59f8cd1eb260b"
+    },
+    "v3_eval_376": {
+      "source": "v3 72-sector training front eval 376",
+      "aep5": 808.5146338742877,
+      "training_q": 3.110118772899626e-05,
+      "coordinates_sha256": "f20ab523f6665c570c8bb659478c07af3e4213529165c7477784edf58142e6d9"
+    }
+  },
+  "layout_order": [
+    "reference",
+    "highest_aep",
+    "balanced",
+    "combined_lowest_risk",
+    "new_lowest_risk",
+    "v3_eval_376"
+  ],
+  "response_probabilities": [
+    0.6,
+    0.0
+  ],
+  "batch_count": 10,
+  "birds_per_batch": 50000,
+  "trajectory_seeds": [
+    915101,
+    915102,
+    915103,
+    915104,
+    915105,
+    915106,
+    915107,
+    915108,
+    915109,
+    915110
+  ],
+  "height_seeds": [
+    916101,
+    916102,
+    916103,
+    916104,
+    916105,
+    916106,
+    916107,
+    916108,
+    916109,
+    916110
+  ],
+  "paired_same_population_per_batch_all_layouts_and_probabilities": true,
+  "primary_comparisons": [
+    [
+      "highest_aep",
+      "combined_lowest_risk"
+    ],
+    [
+      "highest_aep",
+      "balanced"
+    ],
+    [
+      "highest_aep",
+      "reference"
+    ],
+    [
+      "balanced",
+      "reference"
+    ],
+    [
+      "combined_lowest_risk",
+      "reference"
+    ]
+  ],
+  "additional_diagnostic_layouts": [
+    "new_lowest_risk",
+    "v3_eval_376"
+  ],
+  "corridor_coverage": {
+    "reference": {
+      "minimum_rotor_edge_margin_m": 1282.7433220855105,
+      "all_rotor_discs_covered": true
+    },
+    "highest_aep": {
+      "minimum_rotor_edge_margin_m": 157.7148927858001,
+      "all_rotor_discs_covered": true
+    },
+    "balanced": {
+      "minimum_rotor_edge_margin_m": 488.25348671612926,
+      "all_rotor_discs_covered": true
+    },
+    "new_lowest_risk": {
+      "minimum_rotor_edge_margin_m": 1214.1320353253395,
+      "all_rotor_discs_covered": true
+    },
+    "v3_eval_376": {
+      "minimum_rotor_edge_margin_m": 1202.8613209557761,
+      "all_rotor_discs_covered": true
+    },
+    "combined_lowest_risk": {
+      "minimum_rotor_edge_margin_m": 1156.9774040397047,
+      "all_rotor_discs_covered": true
+    }
+  },
+  "training_files_sha256": {
+    "hpc_full_run_v3_72sectors/optimisation/run_settings.json": "63a1e73212b92147ff9773046bd29e34c0712cc03cdf2fd90188d70bd9da7094",
+    "hpc_full_run_v3_72sectors/optimisation/pareto_training.csv": "510cf96ac6166c61737053096dc2378a2eace78c5d0f528299c522944eebda40",
+    "hpc_full_run_v3_72sectors/optimisation/pareto_layouts_xy_m.npy": "5a1e34d29a8e17c394be1a44b4787482ad994b54ec18fbad650a0fbbe1c96bb6",
+    "hpc_seed730102/optimisation/pareto_training.csv": "d0bbb5d713520dc17ca2aa404e639ea2ebacbaa61c106614b29edc595c37f0a1",
+    "hpc_seed730102/optimisation/pareto_layouts_xy_m.npy": "130b1175722cb8120bec89e2d8463a95cf088c33b279dc7b908d98db6c31c5d6",
+    "aep_5deg_check_v2/seed_730102.csv": "bd585e919f19f35c513b9015fa810fdddf330f3e7527ab073bb2643cfaa627cf",
+    "verification/runtime_inputs/energy_baseline.csv": "c1f506d3a9bed5cf16c6ae9074b541fb959bcc41e7ce14c347b34fec02d2f265",
+    "hpc_full_run_v2/optimisation/run_settings.json": "61eda603c5b1d3d3175c1844479176b7ee3929acd824239f9bd271433a2be694"
+  },
+  "source_hashes": {
+    "runner": "ae24d1e13bdd5b98e9781bececf5db49deba6feab2e91f3218632ca2456c4c03",
+    "confirmation": "0d1deb9b6e6d591adc1314bd31c12c93bfc3c11558d28bf34e8e58d8618af1af",
+    "model10_objective": "387518eb9e50feb8460b5cac535e814e6e6e90fe9d33b34df71a823070a087b2",
+    "model10_band": "2c095e33563323fb60a8e7d70cb3ab7b5a9672adbf0df98da32d006fa7ed96e0",
+    "model10_baseline_runner": "c024f4b87d168b21b790e98204db1ca069463fb68624574c957e0f1e273300bb",
+    "model8": "2d9985f6c165a83fac5ed1493cefa1a65e8082a39d17e80e3776be12257e823d",
+    "model8_sampler": "d8f69ac2713be1553e9cc5ac60f5c2f0660d3ba397b35a7d872688e64c3e0510",
+    "model8_validation": "2e4205203858befa3527f310c8d706bb66c48fbcb0813c4e66485c55edabded7",
+    "model9": "3c821d5f62de8b292bc00190ae71ae1379be64ad4cd11c67dc631186b5650f09",
+    "config": "df56f80c33f8912eb44ef6380451d762ba71aabcd0aa002186bf506618fb074e",
+    "floris_wrapper": "686cfcb8d159dd6ac8e7ed2f4f3e612db8257a7c96709ab1c8d294b50bddd7a2",
+    "floris_config": "f6b788df9e38f006dfb6c68ddfb80ab090dad9cd555982a8d5c5e4b0c2f2d364",
+    "gannet_FHD": "adc9ea903db9c8e34bfe5b88c382381b737c2e676d79af437f66d198208a0f2c",
+    "blade_source": "1f39765f76c46d64de7adf1a18e00e2a372e14d737b03ef09f8f397ddacc5b27",
+    "reference_layout": "c1f506d3a9bed5cf16c6ae9074b541fb959bcc41e7ce14c347b34fec02d2f265",
+    "band_checks": "641b7c2bd0941e68e3bb0e363351f5a8e29a892073fc54254b5a9e5f03c2e8c6",
+    "rotor_incidence_checks": "25eabc5b296b0ad3041f587016c17de9bae489f2f7e290eae39c5b34ccf83f70",
+    "integration_checks": "11b1df6a71f059c67b10ba6708ca233d1a8bfebce72ea92e4d8aa6577a3ecc5e",
+    "model9_checks": "5d90eff89284e7908da1ee668407ab5ca1c8f83dde8bfefd328dc82a2c9be54e",
+    "preedit_snapshot": "a220899f04018857f195c5382b243b8413dcaab6e5c61cd83771499b32844400",
+    "preedit_path_coordinates": "ab31299acfa1919fda8c78897a03dae6c1f459e628f760acdc04b02a3fd68c6d",
+    "portable_snapshot_checks": "37e347ef9624996109556ae3b770344bf109951f911cf423479a393cc87ba609",
+    "floris_turbine": "93d2bcfcb619b1819efe8149ce9e8231656e51a29f2ae5c1079a46e339f02feb"
+  },
+  "statistical_method": "two-sided 95% Student-t CI of ten paired batch differences (df=9); unadjusted exploratory intervals",
+  "units": "Expected Band potential-strike contributions per entering bird, not annual fatalities"
+}

@@ -1,0 +1,75 @@
+{
+  "original_72sector_file_hashes": 27,
+  "matched_original_72sector_file_hashes": 27,
+  "n_pareto": 36,
+  "n_final_candidates_recorded": 8000,
+  "population": 80,
+  "generations": 100,
+  "n_sectors_final": 72,
+  "n_sectors_historical": 12,
+  "n_conditions_final": 504,
+  "final_wind_frequency_sum": 1.0,
+  "historical_wind_frequency_sum": 0.9999999999999999,
+  "saved_pareto_objectives_match_scaling": true,
+  "n_initial_saved_layouts": 80,
+  "confirmation_batches": 15,
+  "confirmation_per_batch": 100000,
+  "independent_status": "completed",
+  "all_saved_python_files_ast_parse": 31,
+  "python_ast_failures": {},
+  "imports_unresolved_or_external_candidates": [
+    "cloudpickle",
+    "floris",
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "pymoo",
+    "scipy",
+    "yaml"
+  ],
+  "repository_collision_count": 0,
+  "source_files_copied_without_modification": 123,
+  "omitted_outputs": [
+    {
+      "source": "historical 12-sector graphics",
+      "name": "anchor_layouts/balanced_reference_pareto_032.png",
+      "reason": "Duplicate preview of non-authoritative result"
+    },
+    {
+      "source": "historical 12-sector graphics",
+      "name": "anchor_layouts/energy_endpoint_pareto_032.png",
+      "reason": "Duplicate preview of non-authoritative result"
+    },
+    {
+      "source": "historical 12-sector graphics",
+      "name": "anchor_layouts/rotor_transit_endpoint_pareto_032.png",
+      "reason": "Duplicate preview of non-authoritative result"
+    },
+    {
+      "source": "historical 12-sector graphics",
+      "name": "pareto_front_fresh_validation.png",
+      "reason": "Duplicate preview of non-authoritative result"
+    },
+    {
+      "source": "72-sector final",
+      "name": "checkpoint_latest.pkl",
+      "reason": "Large serialised optimizer checkpoint excluded from GitHub add-on; saved Pareto, full final population and settings retained"
+    },
+    {
+      "source": "72-sector final",
+      "name": "checkpoint_previous.pkl",
+      "reason": "Large serialised optimizer checkpoint excluded from GitHub add-on; saved Pareto, full final population and settings retained"
+    },
+    {
+      "source": "independent evaluation",
+      "name": "independent_batches_checkpoint.csv",
+      "reason": "Duplicate checkpoint CSV of completed independent evaluation; final batches/subsamples kept"
+    },
+    {
+      "source": "independent evaluation",
+      "name": "sample_10000_checkpoint.csv",
+      "reason": "Duplicate checkpoint CSV of completed independent evaluation; final batches/subsamples kept"
+    }
+  ],
+  "verification_method": "Archive inspection, SHA-256 comparisons, Python AST parse, saved CSV/NPY arithmetic. NO FLORIS, bird simulation, tests, NSGA-II or plot generation executed."
+}

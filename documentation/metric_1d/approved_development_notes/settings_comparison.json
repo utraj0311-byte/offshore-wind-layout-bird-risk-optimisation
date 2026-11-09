@@ -1,0 +1,33 @@
+{
+  "approval": "User approved 1-degree (360-sector) Jensen re-optimisation, including fresh 1a; 2026-10-16",
+  "scientific_parameters_changed_against_archives": {
+    "Jensen wind sectors": "12 -> 360"
+  },
+  "scientific_parameters_changed_against_previous_2degree_package": {
+    "Jensen wind sectors": "180 -> 360"
+  },
+  "all_unchanged": [
+    "D=240m",
+    "4D min spacing=960m",
+    "Jensen wake equations and Ct curve",
+    "wind speeds/direction weights/Weibull",
+    "bird activity fields",
+    "NSGA-II objective scales, historical AEP_ref=754.4007727706155 GWh/year",
+    "seed 42",
+    "pop/gen 80x100 (1a), 120x150 (1b-1d)",
+    "GridSampling initial population",
+    "original NSGA2 constructor/operators with pymoo 0.6.1.5"
+  ],
+  "postprocess_only": [
+    "full Pareto coordinate logging",
+    "independent 1-degree reporting AEP for all final layouts",
+    "0.5-degree convergence for both selected endpoints",
+    "automatic all-metric Pareto plots",
+    "hard-stop on >=0.2 percent difference"
+  ],
+  "FLORIS_remains": "72 sectors (5 degree) optimization; final re-evaluation at 360 sectors (1 degree), report delta from 5 degree; never silently change geometry to D=240m",
+  "AEP_reference_provenance": "Recovered exactly from archives, not physically identified",
+  "prior_2degree_1a": "Archived separately as diagnostic only; not used as a seed or final result",
+  "historical_pymoo_version": "not recoverable from archives",
+  "new_environment_pymoo": "0.6.1.5 (verified by user in floris-env)"
+}
